@@ -1,0 +1,13 @@
+1. using files (sequential,random accessing)
+
+2. operator overloading 
+
+3. templates
+
+4. friend class/functions
+
+5. proxy classes
+
+6. getter / setter member functions
+
+7. static data members 
