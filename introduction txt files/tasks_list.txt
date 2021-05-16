@@ -1,3 +1,5 @@
 1 - installing github desktop
 2 - meeting
 3 - thinking about main story of game
+4 - managing mini games
+5 - writing the docs
