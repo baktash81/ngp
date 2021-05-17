@@ -13,7 +13,7 @@ class keyGenerator{
 		int first_j ;
 		int second_i ;
 		int second_j ;
-		int blocked_i; // --------------------------
+		int blocked_i;
 		int no_blocked_j; // ---------o----------
 		int blocked_j; 
 		int no_blocked_i;
