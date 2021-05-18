@@ -18,23 +18,28 @@ class keyGenerator{
 		int blocked_j; 
 		int no_blocked_i;
 		int len ;
+		int emtiaz;
 		string key;
 		keyGenerator(){
 			// constructor
 			success = 0 ;
 			fail = 0;
 			len = 9 ;
+			emtiaz  = 0 ;
 		}
 		void gamerunner(){
 			// assemblening the other functions and runnig the game
 			while(true){
 				initialize();
 				table_drawer();
+				
 				if(validator()){
-					cout << "yess";
+					cout << endl << "TRUE" << endl << endl ;
+					emtiaz = emtiaz + 10 ;
 				}else{
-					cout << "no" ;
-				}	
+					cout << endl << "FALSE" << endl << endl;
+				}
+				sleep(1);	
 			}
 
 		}
@@ -48,11 +53,10 @@ class keyGenerator{
 			
 			
 			// if both were the same
-			while((first_i == second_i && abs(first_j-second_j) <= 1) || (first_j == second_j && abs(first_i-second_i) <= 1)){
+			while((abs(first_j-second_j) <= 1) || (abs(first_i-second_i) <= 1)){
 				second_i = rand()%len;
 				second_j = rand()%len;
 			}
-			cout << "1" << endl ;
 			
 			// block cells initializations (i)
 			blocked_i = rand()%len ;
@@ -73,13 +77,11 @@ class keyGenerator{
 			// free of block "cell" initialization (j)
 			no_blocked_j = rand()%len ;
 
-			cout << "2" << endl ;
 			
-			cout << "first is : ( " <<  first_i << " , " << first_j << " )" << endl ;
-			cout << "second is : ( " <<  second_i << " , " << second_j << " )" << endl ;
+
 			// block cells initializations (j)
 			blocked_j = rand()%len ;
-			cout << "wall i : " << blocked_i << endl ;
+			
 			// block cells initializations (j)
 			if(first_j > second_j ){
 				while(blocked_j == first_j ||  blocked_j == second_j || blocked_j > first_j ||  blocked_j < second_j ){
@@ -94,12 +96,12 @@ class keyGenerator{
 					blocked_j = rand()%len ;
 				}
 			}
-			cout << "3" << endl ;
+			
 			// barressi konim ke sorrakh soton nayofte ro divar radif
 			while(blocked_j == no_blocked_j){
 				no_blocked_j = rand()%len ;
 			}
-			cout << "4" << endl ;
+			
 			no_blocked_i = rand()%len ;
 			if(first_j == second_j && first_i != second_i){
 				if(blocked_j > first_j){
@@ -122,15 +124,15 @@ class keyGenerator{
 					}
 				}
 			}
-			cout << "5" << endl ;
+			
 			// free of block "cell" initialization (i)
 			if((first_j > second_j && first_i > second_i ) || (first_j < second_j && first_i < second_i )){
 				if(no_blocked_j > blocked_j){
-					while( no_blocked_i <= blocked_i ){
+					while( no_blocked_i >= blocked_i ){
 						no_blocked_i = rand()%len ;
 					}
 				}else{
-					while(no_blocked_i >= blocked_i){
+					while(no_blocked_i <= blocked_i){
 						no_blocked_i = rand()%len ;
 					}
 				}
@@ -145,6 +147,9 @@ class keyGenerator{
 					}
 				}
 			}
+			
+			// these couts are for testing
+			/*
 			cout << "6" << endl ;
 			cout << "first is : ( " <<  first_i << " , " << first_j << " )" << endl ;
 			cout << "second is : ( " <<  second_i << " , " << second_j << " )" << endl ;
@@ -152,12 +157,10 @@ class keyGenerator{
 			cout << "wall j is: " << blocked_j << endl ;
 			cout << "free in i wall : " << no_blocked_j << endl ;
 			cout << "free in j wall : " << no_blocked_i << endl ;
-		
+			*/
 		}
 		void table_drawer(){
 			// output the table and its cells
-			
-			cout << "table drawer is open!" << endl;
 			cout << "    " ;
 			for(int i =0 ; i < len ; i++){
 				if(i >= 9){
@@ -208,7 +211,7 @@ class keyGenerator{
 	
 		bool validator(){
 			// validate the input string
-			cout << "key is: " ;
+			cout << "INPUT THE KEY : " ;
 			cin >> key;
 			int up =0 , right=0 , left=0,down= 0;
 			int i_go = first_i ;
