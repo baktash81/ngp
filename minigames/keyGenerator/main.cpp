@@ -23,6 +23,7 @@ class keyGenerator{
 		int block_colors;
 		string key;
 		HANDLE  hConsole;
+		bool passed;
 	public:
 		keyGenerator(){
 			// constructor
@@ -33,6 +34,7 @@ class keyGenerator{
 			hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 			number_colors = 10;
 			block_colors = 6; 
+			passed = false;
 		}
 		
 		void gamerunner(){
@@ -47,6 +49,7 @@ class keyGenerator{
 					emtiaz = emtiaz + 10 ;
 					cout << "SCORE IS : " << emtiaz;
 					cout << endl << endl;
+					passed = true;
 				}else{
 					cout << endl << "FALSE" << endl ;
 					cout << "SCORE IS : " << emtiaz;
