@@ -31,26 +31,37 @@ class keyGenerator{
 			emtiaz  = 0 ;
 			hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 			number_colors = 10;
-			block_colors = 2; 
+			block_colors = 6; 
 		}
 		void gamerunner(){
 			// assemblening the other functions and runnig the game
-			
-			
 			
 			while(true){
 				initialize();
 				table_drawer();
 				
 				if(validator()){
-					cout << endl << "TRUE" << endl << endl ;
+					cout << endl << "TRUE" << endl  ;
 					emtiaz = emtiaz + 10 ;
+					cout << "SCORE IS : " << emtiaz;
+					cout << endl << endl;
 				}else{
-					cout << endl << "FALSE" << endl << endl;
+					cout << endl << "FALSE" << endl ;
+					cout << "SCORE IS : " << emtiaz;
+					cout << endl << endl;
 				}
-				sleep(1);	
+				sleep(1);
+				if(emtiaz == 40 || emtiaz == 50){
+					len = 10;
+				}else if(emtiaz == 60 || emtiaz== 70){
+					len = 11;
+				}else if(emtiaz == 80 || emtiaz == 90){
+					len = 12;
+				}else if(emtiaz == 100){
+					break;
+				}
 			}
-
+			cout << endl << endl << "YOU WON !" << endl ;
 		}
 		
 		void initialize(){
@@ -211,7 +222,9 @@ class keyGenerator{
 						}else{
 							//color the block: 10 -> green
 							SetConsoleTextAttribute(hConsole, block_colors);
-							cout << char(178) << char(178) ;
+							cout << char(219) << char(219) ;
+							//178 alternative code for blocks
+							
 							//set back to defualt: 15 -> white
 							SetConsoleTextAttribute(hConsole, 15);
 							cout << "|";
