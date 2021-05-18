@@ -222,9 +222,7 @@ class keyGenerator{
 						}else{
 							//color the block: 10 -> green
 							SetConsoleTextAttribute(hConsole, block_colors);
-							cout << char(219) << char(219) ;
-							//178 alternative code for blocks
-							
+							cout << char(178) << char(178) ;
 							//set back to defualt: 15 -> white
 							SetConsoleTextAttribute(hConsole, 15);
 							cout << "|";
@@ -245,7 +243,8 @@ class keyGenerator{
 		bool validator(){
 			// validate the input string
 			cout << "INPUT THE KEY : " ;
-			cin >> key;
+			//cin >> key;
+			getline(cin , key);
 			int up =0 , right=0 , left=0,down= 0;
 			int i_go = first_i ;
 			int j_go = first_j ;
