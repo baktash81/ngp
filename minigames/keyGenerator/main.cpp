@@ -6,7 +6,7 @@
 // mini game to poison the AI
 using namespace std;
 class keyGenerator{
-	public:
+	private:
 		int success ;
 		int fail  ;
 		int first_i ;
@@ -23,6 +23,7 @@ class keyGenerator{
 		int block_colors;
 		string key;
 		HANDLE  hConsole;
+	public:
 		keyGenerator(){
 			// constructor
 			success = 0 ;
@@ -33,6 +34,7 @@ class keyGenerator{
 			number_colors = 10;
 			block_colors = 6; 
 		}
+		
 		void gamerunner(){
 			// assemblening the other functions and runnig the game
 			
@@ -63,7 +65,7 @@ class keyGenerator{
 			}
 			cout << endl << endl << "YOU WON !" << endl ;
 		}
-		
+	private:	
 		void initialize(){
 			// initializing each data member each time
 			first_i = rand()%len;
@@ -179,6 +181,7 @@ class keyGenerator{
 			cout << "free in j wall : " << no_blocked_i << endl ;
 			*/
 		}
+		
 		void table_drawer(){
 			// output the table and its cells
 			cout << "    " ;
@@ -239,7 +242,7 @@ class keyGenerator{
 				cout << endl ;
 			}
 		}
-	
+		
 		bool validator(){
 			// validate the input string
 			cout << "INPUT THE KEY : " ;
