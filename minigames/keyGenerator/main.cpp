@@ -1,8 +1,8 @@
-#include <iostream> 
-#include <cstdlib>
-#include <ctime>
-#include <cstdlib>
-#include <unistd.h>
+#include <iostream>  //output
+#include <ctime>  	//timing
+#include <cstdlib> // random
+#include <unistd.h> //sleep
+#include <windows.h> //changing the color
 // mini game to poison the AI
 using namespace std;
 class keyGenerator{
@@ -19,16 +19,25 @@ class keyGenerator{
 		int no_blocked_i;
 		int len ;
 		int emtiaz;
+		int number_colors;
+		int block_colors;
 		string key;
+		HANDLE  hConsole;
 		keyGenerator(){
 			// constructor
 			success = 0 ;
 			fail = 0;
 			len = 9 ;
 			emtiaz  = 0 ;
+			hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+			number_colors = 10;
+			block_colors = 2; 
 		}
 		void gamerunner(){
 			// assemblening the other functions and runnig the game
+			
+			
+			
 			while(true){
 				initialize();
 				table_drawer();
@@ -187,14 +196,25 @@ class keyGenerator{
 				//entries :
 				for(int i =0 ; i < len ; i++){
 					if(i == first_i && j ==first_j){
-						cout << " 0|" ;
+						SetConsoleTextAttribute(hConsole, number_colors);
+						cout << " 0" ;
+						SetConsoleTextAttribute(hConsole, 15);
+						cout << "|";
 					}else if (i == second_i && j ==second_j) {
-						cout << " 1|" ;
+						SetConsoleTextAttribute(hConsole, number_colors);
+						cout << " 1" ;
+						SetConsoleTextAttribute(hConsole, 15);
+						cout << "|";
 					}else if((i == blocked_i || j == blocked_j)){
 						if(i == no_blocked_i || j ==no_blocked_j ){
 							cout << "  |";
 						}else{
-							cout << char(178) << char(178) << "|";
+							//color the block: 10 -> green
+							SetConsoleTextAttribute(hConsole, block_colors);
+							cout << char(178) << char(178) ;
+							//set back to defualt: 15 -> white
+							SetConsoleTextAttribute(hConsole, 15);
+							cout << "|";
 						}
 					}else{
 						cout << "  |";
