@@ -4,7 +4,7 @@
 #include <unistd.h> //sleep
 #include <windows.h> //changing the color
 
-class maingame{
+class gamesAssemble{
 	public:
 		void start(){
 			//start the game!
