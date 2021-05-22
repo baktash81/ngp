@@ -2,7 +2,9 @@
 #ifndef REFLEXES_MEMBER_H
 #define REFLEXES_MEMBER_H
 #include "random.h"
+#include <string>
 using namespace std;
+
 
 class Member{
 private :

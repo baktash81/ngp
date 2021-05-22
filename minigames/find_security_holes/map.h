@@ -1,6 +1,8 @@
 #ifndef REFLEXES_MAP_H
 #define REFLEXES_MAP_H
 #include "member.h"
+#include <string>
+using namespace std;
 class Map{
 private :
     int level;
