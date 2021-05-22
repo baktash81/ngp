@@ -4,6 +4,7 @@
 #include <unistd.h> //sleep
 #include <windows.h> //changing the color
 // mini game to poison the AI
+
 using namespace std;
 class keyGenerator{
 	private:
