@@ -17,7 +17,6 @@ Member::Member(int &level){
                     if(i==r.different_place[0][0] && j==r.different_place[0][1]){
                         chararray[i][j] = dcharacter;
                         position.push_back(width[j]);position.append(to_string(i+1));
-                        cout<<endl<<"pp :: "<<position<<endl;
                     }
                     else
                         chararray[i][j] = character;
