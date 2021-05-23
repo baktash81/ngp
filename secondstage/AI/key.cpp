@@ -16,15 +16,15 @@ void keyGenerator::gamerunner(){
 				if(validator()){
 					cout << endl << "TRUE" << endl  ;
 					emtiaz = emtiaz + 10 ;
-					cout << "SCORE IS : " << emtiaz;
-					cout << endl << endl;
+					cout << endl;
 					
 				}else{
 					cout << endl << "FALSE" << endl ;
-					cout << "SCORE IS : " << emtiaz;
-					cout << endl << endl;
-					loose = loose + 10 ;
+					cout << endl;
+					loose = loose + 1 ;
 				}
+				cout << "SCORE IS : " << emtiaz << endl ;
+				cout << "YOU CAN TYR " << (3  - loose) << " MORE TIMES !" << endl ;
 				sleep(1);
 				if(emtiaz == 20){
 					len = 10;
@@ -37,6 +37,12 @@ void keyGenerator::gamerunner(){
 					len = 12;
 				}else if(emtiaz == 50){
 					len = 13;
+				}
+				
+				if (loose == 3){
+					cout << "game over :(" << endl ;
+					pass = false;
+					break;
 				}
 			}
 			
@@ -221,7 +227,9 @@ void keyGenerator::table_drawer(){
 				cout << endl ;
 			}
 }
-
+void keyGenerator::resetloose(){
+	loose = 0;
+}
 bool keyGenerator::validator(){
 			// validate the input string
 			cout << "INPUT THE KEY : " ;
