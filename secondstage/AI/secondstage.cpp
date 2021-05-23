@@ -5,8 +5,7 @@
 #include <unistd.h> //sleep
 #include <windows.h> //changing the color
 #include <fstream>
-#include "key.h"
-#include "security_holes.h"
+#include "assemble.h"
 using namespace std;
 class ZeroToUniversity{
 	public:
@@ -14,15 +13,18 @@ class ZeroToUniversity{
 		bool scores_checked = false;
 		
 		// lms hack method
-		keyGenerator lms;
+		//keyGenerator lms;
 		
 		// goverment hack method
-		keyGenerator goverment;
+		//keyGenerator goverment;
 		
 		// AI hack method
-		keyGenerator AI;
-		Security_Holes turnoff;
-		
+		//keyGenerator AI;
+		//Security_Holes turnoff;
+		//assembling all games 
+		assemble final;
+		assemble goverment;
+		assemble AI;
 		// score of chloe classmates and her too(first amount of "score table")
 		int vahid_math = 18 ;
 		int vahid_AP = 19 ;
@@ -143,7 +145,7 @@ class ZeroToUniversity{
 				
 				// private file reading from "file/privatefile.txt"
 				string alpha[20];
-				ifstream privatefile ("../file/privatefile.txt" );
+				ifstream privatefile ("file/privatefile.txt" );
 				if(!privatefile){
 					cout << "Error file not found!" << endl ;
 				}
@@ -405,7 +407,7 @@ class ZeroToUniversity{
 					//after checking scores
 					
 					// "lms.pass" baressi konim age ghablan site ro hack karde dg lazm nabashe dobare hack kone
-					if(!lms.pass){
+					if(!final.rezpass){
 						
 						// before hacking
 						alpha[0] = "see your scores" ;
@@ -422,8 +424,8 @@ class ZeroToUniversity{
 						}else if(input == "3"){
 							return;
 						}else if(input == "2"){
-							lms.gamerunner();
-							if(lms.pass){
+							
+							if(final.rez_gamerun()){
 								Indocs();
 							}
 						}
@@ -527,21 +529,7 @@ class ZeroToUniversity{
 			// output game tips
 			cout << "This is the AI Structure use its weak points an poisen it by Injecting a code :" << endl ;
 			
-			//run the "keygenerator game"
-			AI.gamerunner();
-			
-			//check if it is passed !
-			if(AI.pass){
-				turnoff.rungame();
-				if(turnoff.get_score() > 200){
-					sec_pass = true;
-				}
-			}
-			
-			if(sec_pass){
-				cout << "-------------------------------------------------win---------------------------------" ;
-				exit(0);
-			}
+			AI.gamelogic();
 		}
 		
 		// showning the hackers info
@@ -660,7 +648,7 @@ class ZeroToUniversity{
 					// private file check shude :
 					
 					// baressi konim k aya ghablan site ro hack karde ya na (ke dobare hack nakone
-					if(!goverment.pass){
+					if(!goverment.rezpass){
 						//befor hacking "158.58.187.219"
 						string alpha[] = {"university LMS" , "email" , "158.58.187.219" , "back"};
 						if(inbox == 1){
@@ -679,8 +667,8 @@ class ZeroToUniversity{
 						}else if(input == "2"){
 							Inemail();
 						}else if(input == "3"){
-							goverment.gamerunner();
-							if(goverment.pass){
+							
+							if(goverment.rez_gamerun()){
 								Ingoverment();
 							}
 						}
