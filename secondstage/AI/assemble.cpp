@@ -27,7 +27,7 @@ bool assemble::baktash_gamerun(){
 	return second.get_score() > 200 ;
 }
 
-bool assemble::rez_gamerun(int sc=0){
+bool assemble::rez_gamerun(int sc){
 	if(sc != 0){
 		first.setendemtiaz(sc);
 	}
@@ -35,7 +35,9 @@ bool assemble::rez_gamerun(int sc=0){
 	rezpass = first.pass;
 	return first.pass;
 }
-
+void assemble::rez_game_resetloose(){
+	first.resetloose();
+}
 void assemble::hesam_gamerun(){
 	
 }
