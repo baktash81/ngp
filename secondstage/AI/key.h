@@ -24,7 +24,8 @@ class keyGenerator{
 		int number_colors;
 		int block_colors;
 		string key;
-		
+		int loose;
+		int endemtiaz;
 		HANDLE  hConsole;
 	public:
 		bool pass ;
@@ -38,9 +39,12 @@ class keyGenerator{
 			hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 			number_colors = 10;
 			block_colors = 6; 
+			loose = 0;
+			endemtiaz = 50;
 		}
 		
 		void gamerunner();
+		void setendemtiaz(int);
 	private:	
 		void initialize();	
 		void table_drawer();
