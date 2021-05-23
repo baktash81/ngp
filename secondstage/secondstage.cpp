@@ -6,7 +6,7 @@
 #include <windows.h> //changing the color
 #include <fstream>
 #include "keygenerator/key.h"
-#include "../minigames/find_security_holes/security_holes.h"
+#include "find_security_holes/security_holes.h"
 using namespace std;
 class ZeroToUniversity{
 	public:
