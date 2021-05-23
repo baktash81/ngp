@@ -31,7 +31,7 @@ class keyGenerator{
 			success = 0 ;
 			fail = 0;
 			len = 9 ;
-			pass = false;
+			pass = true;
 			emtiaz  = 0 ;
 			hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 			number_colors = 10;
