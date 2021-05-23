@@ -49,6 +49,8 @@ class ZeroToUniversity{
 		int ai_color;
 		HANDLE  hConsole;
 		
+		//second game pass (security hole)
+		bool sec_pass;
 		// constructor
 		ZeroToUniversity(){
 			// first value of email inbox
@@ -59,6 +61,7 @@ class ZeroToUniversity{
 			vahidemailsent =false;
 			privatefilechecked = false;
 			
+			sec_pass = false;
 			// red color for phrase "PC AI"
 			ai_color = 12 ;
 			
@@ -530,6 +533,14 @@ class ZeroToUniversity{
 			//check if it is passed !
 			if(AI.pass){
 				turnoff.rungame();
+				if(turnoff.get_score() > 200){
+					sec_pass = true;
+				}
+			}
+			
+			if(sec_pass){
+				cout << "-------------------------------------------------win---------------------------------" ;
+				exit(0);
 			}
 		}
 		
