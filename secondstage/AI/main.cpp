@@ -23,12 +23,12 @@ class ZeroToUniversity{
 		
 		
 		// score of chloe classmates and her too(first amount of "score table")
-		int vahid_math = 18 ;
-		int vahid_AP = 19 ;
-		int vahid_physic = 16;
-		int mohsen_math = 19;
-		int mohsen_AP = 18;
-		int mohsen_physic = 17 ;
+		int hesam_math = 18 ;
+		int hesam_AP = 19 ;
+		int hesam_physic = 16;
+		int baktash_math = 19;
+		int baktash_AP = 18;
+		int baktash_physic = 17 ;
 		int chloe_math = 18 ;
 		int chloe_AP = 2;
 		int chloe_physic = 14 ;
@@ -38,8 +38,8 @@ class ZeroToUniversity{
 		int inbox;
 		
 		// to check which index of inbox should be filled
-		bool mohsenemailsent;
-		bool vahidemailsent;
+		bool baktashemailsent;
+		bool hesamemailsent;
 		
 		// to activate hack the 158.58.187.219
 		bool privatefilechecked;
@@ -56,8 +56,8 @@ class ZeroToUniversity{
 			email[0] = "NONE" ;
 			email[1] = "NONE" ;
 			inbox = 0;
-			mohsenemailsent = false;
-			vahidemailsent =false;
+			baktashemailsent = false;
+			hesamemailsent =false;
 			privatefilechecked = false;
 			
 			sec_pass = false;
@@ -176,12 +176,12 @@ class ZeroToUniversity{
 				
 				// output the table
 				cout << " Name   : math , AP , physics " << endl;
-				cout << " mohsen : "<< mohsen_math << " , " << mohsen_AP << " , " << mohsen_physic << endl ;
-				cout << " vahid  : "<< vahid_math << " , " << vahid_AP << " , " << vahid_physic << endl ;
+				cout << " baktash : "<< baktash_math << " , " << baktash_AP << " , " << baktash_physic << endl ;
+				cout << " hesam  : "<< hesam_math << " , " << hesam_AP << " , " << hesam_physic << endl ;
 				cout << " chloe  : "<< chloe_math << " , " << chloe_AP << " , " << chloe_physic << endl ;
 				
 				// showing how it works:
-				cout << endl << "Select to edit (example : vahid.math ) :" << endl;
+				cout << endl << "Select to edit (example : hesam.math ) :" << endl;
 				
 				// output text and check user input(inke user chikar mikhd bokone)
 				string choic[] = { "back"};
@@ -195,7 +195,7 @@ class ZeroToUniversity{
 				///////////////////// template needed/////////////////////////
 				
 				//check if user input is true:
-				if(( input == "mohsen.math" || input == "mohsen.physics" ||input == "mohsen.AP" || input == "mohsen.ap" ||input == "vahid.AP" || input == "vahid.ap" ||input == "vahid.physics" ||input == "vahid.math" || input == "chloe.AP" || input == "chloe.ap" || input == "chloe.physics" || input == "chloe.math" )){
+				if(( input == "baktash.math" || input == "baktash.physics" ||input == "baktash.AP" || input == "baktash.ap" ||input == "hesam.AP" || input == "hesam.ap" ||input == "hesam.physics" ||input == "hesam.math" || input == "chloe.AP" || input == "chloe.ap" || input == "chloe.physics" || input == "chloe.math" )){
 					cout << "Change number to : ";
 					cin >> changed;	
 				}else if (input == "1"){
@@ -212,51 +212,51 @@ class ZeroToUniversity{
 					sleep(2);
 				}else {
 					
-					//if mohsen score is changed, sent email to him
-					if((input == "mohsen.math" || input == "mohsen.physics" || input == "mohsen.AP" || input == "mohsen.ap") && !mohsenemailsent ){
-						mohsenemailsent = true;
+					//if baktash score is changed, sent email to him
+					if((input == "baktash.math" || input == "baktash.physics" || input == "baktash.AP" || input == "baktash.ap") && !baktashemailsent ){
+						baktashemailsent = true;
 						inbox++;
 						int index ;
-						if(vahidemailsent){
+						if(hesamemailsent){
 							index = 1 ;
 						}else{
 							index = 0 ;
 						}
-						// email content (mohsen)
-						email[index] = "Mohsen : I feel my scores had changed but I dont know why";
+						// email content (baktash)
+						email[index] = "baktash : I feel my scores had changed but I dont know why";
 						
-					//if vahid score is changed, sent email to him
-					}else if((input == "vahid.math" || input == "vahid.physics" || input == "vahid.AP" || input == "vahid.ap") && !vahidemailsent){
-						vahidemailsent = true;
+					//if hesam score is changed, sent email to him
+					}else if((input == "hesam.math" || input == "hesam.physics" || input == "hesam.AP" || input == "hesam.ap") && !hesamemailsent){
+						hesamemailsent = true;
 						inbox++;
 						int index ;
-						if(mohsenemailsent){
+						if(baktashemailsent){
 							index = 1 ;
 						}else{
 							index = 0 ;
 						}
-						// email content (vahid)
-						email[index] = "vahid : Whats wrong with LMS? my scores had changed!";
+						// email content (hesam)
+						email[index] = "hesam : Whats wrong with LMS? my scores had changed!";
 					}
 					
 					//finally changing the score !
-					if(input == "mohsen.math"){
-						mohsen_math = changed;
+					if(input == "baktash.math"){
+						baktash_math = changed;
 						
-					}else if(input == "mohsen.physics"){
-						mohsen_physic = changed;
+					}else if(input == "baktash.physics"){
+						baktash_physic = changed;
 						
-					}else if(input == "mohsen.AP" || input == "mohsen.ap" ){
-						mohsen_AP = changed;
+					}else if(input == "baktash.AP" || input == "baktash.ap" ){
+						baktash_AP = changed;
 						
-					}else if(input == "vahid.AP" || input == "vahid.ap"){
-						vahid_AP = changed;
+					}else if(input == "hesam.AP" || input == "hesam.ap"){
+						hesam_AP = changed;
 						
-					}else if(input == "vahid.physics"){
-						vahid_physic = changed;
+					}else if(input == "hesam.physics"){
+						hesam_physic = changed;
 						
-					}else if(input == "vahid.math"){
-						vahid_math = changed;
+					}else if(input == "hesam.math"){
+						hesam_math = changed;
 						
 					}else if(input == "chloe.AP" || input == "chloe.ap"){
 						chloe_AP = changed;
@@ -289,8 +289,8 @@ class ZeroToUniversity{
 				
 				// table
 				cout << " Name   : math , AP , physics " << endl;
-				cout << " mohsen : "<< mohsen_math << " , " << mohsen_AP << " , " << mohsen_physic << endl ;
-				cout << " vahid  : "<< vahid_math << " , " << vahid_AP << " , " << vahid_physic << endl ;
+				cout << " baktash : "<< baktash_math << " , " << baktash_AP << " , " << baktash_physic << endl ;
+				cout << " hesam  : "<< hesam_math << " , " << hesam_AP << " , " << hesam_physic << endl ;
 				cout << " chloe  : "<< chloe_math << " , " << chloe_AP << " , " << chloe_physic << endl ;
 				
 				// output text and check user input(inke user chikar mikhd bokone)
@@ -424,6 +424,8 @@ class ZeroToUniversity{
 							system("cls");
 							if(final.rez_gamerun(30)){
 								Indocs();
+							}else{
+								final.rez_game_resetloose();
 							}
 						}
 					}else{
@@ -665,8 +667,10 @@ class ZeroToUniversity{
 							Inemail();
 						}else if(input == "3"){
 							system("cls");
-							if(goverment.rez_gamerun()){
+							if(goverment.rez_gamerun(0)){
 								Ingoverment();
+							}else{
+								goverment.rez_game_resetloose();
 							}
 						}
 					}else{
