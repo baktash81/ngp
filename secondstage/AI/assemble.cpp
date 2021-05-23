@@ -38,7 +38,9 @@ bool assemble::rez_gamerun(int sc){
 void assemble::rez_game_resetloose(){
 	first.resetloose();
 }
-void assemble::hesam_gamerun(){
-	
+bool assemble::hesam_gamerun(){
+	third.gamerunner();
+	hesampass = third.pass;
+	return hesampass;
 }
 
