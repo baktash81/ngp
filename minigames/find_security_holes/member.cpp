@@ -4,7 +4,20 @@
 #include "member.h"
 using namespace std;
 
-
+string tostring(int num){
+    string s="";
+    if(num<10){
+        char c = num+'0';
+        s.push_back(c);
+    }
+    else if (num>=10){
+        char d = (num/10)+'0';
+        s.push_back(d);
+        char y = (num%10)+'0';
+        s.push_back(y);
+    }
+    return s;
+}
 
 Member::Member(int &level){
     Random r;
@@ -16,7 +29,7 @@ Member::Member(int &level){
                 for (int j = 0; j < 20; j++) {
                     if(i==r.different_place[0][0] && j==r.different_place[0][1]){
                         chararray[i][j] = dcharacter;
-                        position.push_back(width[j]);position.append(to_string(i+1));
+                        position.push_back(width[j]);position.append(tostring(i+1));
                     }
                     else
                         chararray[i][j] = character;
@@ -28,14 +41,14 @@ Member::Member(int &level){
                 for (int j = 0; j < 20; j++) {
                     if (i == r.different_place[0][0] && j == r.different_place[0][1]) {
                         chararray[i][j] = dcharacter;
-                        position.push_back(width[j]);position.append(to_string(i+1));
-                        str[0].push_back(width[j]);str[0].append(to_string(i+1));
+                        position.push_back(width[j]);position.append(tostring(i+1));
+                        str[0].push_back(width[j]);str[0].append(tostring(i+1));
 
                     }
                     else if (i == r.different_place[1][0] && j == r.different_place[1][1]) {
                         chararray[i][j] = dcharacter;
-                        position.push_back(width[j]);position.append(to_string(i+1));
-                        str[1].push_back(width[j]);str[1].append(to_string(i+1));
+                        position.push_back(width[j]);position.append(tostring(i+1));
+                        str[1].push_back(width[j]);str[1].append(tostring(i+1));
                     }
                     else
                         chararray[i][j] = character;
