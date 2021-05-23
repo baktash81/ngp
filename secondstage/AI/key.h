@@ -45,6 +45,7 @@ class keyGenerator{
 		
 		void gamerunner();
 		void setendemtiaz(int);
+		void resetloose();
 	private:	
 		void initialize();	
 		void table_drawer();
