@@ -5,7 +5,7 @@ to access our portal and datacenter.
 
 URL : 158.58.187.219
 Tip for password:
- - 1 ineger
- - 2 char
+ - first char : uppercase alphabet
+ - two others : integer
 
 --- ITO ---
