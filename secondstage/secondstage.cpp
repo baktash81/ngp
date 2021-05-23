@@ -101,10 +101,10 @@ class ZeroToUniversity{
 				SetConsoleTextAttribute(hConsole, 7);
 				
 				// PC AI says:
-				cout << "so we are in iust datacenter. hey is that privat folder ?" << endl ;
+				cout << "So we are in iust data center. Hey is that private folder ?!" << endl ;
 				
 				// user can choose on of these to go:
-				string alpha[] = { "TABLE1_STUDENTS_SCORE" , "PRIVATE FILES" , "back"};
+				string alpha[] = { "TABLE_STUDENTS_SCORE" , "PRIVATE FILES" , "back"};
 				
 				// output choices
 				OutputChoices(alpha , 3);
@@ -136,7 +136,7 @@ class ZeroToUniversity{
 				SetConsoleTextAttribute(hConsole, ai_color);
 				cout << " PC AI : " ; 
 				SetConsoleTextAttribute(hConsole, 7);
-				cout << "as you see there is some info that you can access the ITO with it. \n the web address added to your browser.\n lets see what'a happeing there." << endl ;
+				cout << "As you see there is some info that you can access the ITO with it. \n The web address added to your browser.\n Lets see what's happening there." << endl ;
 				
 				// private file reading from "file/privatefile.txt"
 				string alpha[20];
@@ -221,7 +221,7 @@ class ZeroToUniversity{
 							index = 0 ;
 						}
 						// email content (mohsen)
-						email[index] = "Mohsen : i feel my scores had changed but i dont know why";
+						email[index] = "Mohsen : I feel my scores had changed but i dont know why";
 						
 					//if vahid score is changed, sent email to him
 					}else if((input == "vahid.math" || input == "vahid.physics" || input == "vahid.AP" || input == "vahid.ap") && !vahidemailsent){
@@ -355,7 +355,7 @@ class ZeroToUniversity{
 				//defualt output color
 				SetConsoleTextAttribute(hConsole, 7);
 				
-				// output text and check user input(inke user chikar mikhd bokone)
+				// output text and check user input(inke user chikar mikhad bokone)
 				string alpha[] = {"back"};
 				OutputChoices(alpha , 1);
 				string input;
@@ -515,14 +515,14 @@ class ZeroToUniversity{
 			SetConsoleTextAttribute(hConsole, 7);
 			cout << "goodbye..." << endl << endl ;
 			sleep(2);
-			cout << "(now you have to turn AI of with these security steps!)" << endl << endl ;
+			cout << "(Now you have to turn AI off with these security steps!)" << endl << endl ;
 			sleep(2);
 			
 			// clear past inputs and outputs
 			system("cls");
 			
 			// output game tips
-			cout << "this is the AI Structure use its weak points an poisen it by Injecting a code :" << endl ;
+			cout << "This is the AI Structure use its weak points an poisen it by Injecting a code :" << endl ;
 			
 			//run the "keygenerator game"
 			AI.gamerunner();
