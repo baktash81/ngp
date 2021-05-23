@@ -2,6 +2,9 @@
 using namespace std;
 #include "key.h"
 #include "security_holes.h"
+
+#ifndef REZ_ASSEMBLE_GAMES
+#define REZ_ASSEMBLE_GAMES
 class assemble{
 	public:
 	bool pass;
@@ -16,3 +19,4 @@ class assemble{
 	bool baktash_gamerun();
 	void hesam_gamerun();
 };
+#endif
