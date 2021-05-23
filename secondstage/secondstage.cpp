@@ -807,13 +807,19 @@ class ZeroToUniversity{
 			}
 		}
 		
+		// desktop game directory
 		void Indesktopgame(){
 			while(true){
+				// clear past inputs and outputs
 				system("cls");
+				
+				// AI output
 				SetConsoleTextAttribute(hConsole, ai_color);
 				cout << " PC AI : " ; 
 				SetConsoleTextAttribute(hConsole, 7);
 				cout << "games folder is open" << endl << endl ;
+				
+				// output text and check user input(inke user chikar mikhd bokone)
 				string a[] = {"guess the number!" , "back"};
 				OutputChoices(a , 2);
 				string g;
@@ -826,13 +832,20 @@ class ZeroToUniversity{
 				}
 			}
 		}
+		
+		//desktop
 		void start(){
 			while(true){
+				// clear past inputs and outputs
 				system("cls");
+				
+				// AI output
 				SetConsoleTextAttribute(hConsole, ai_color);
 				cout << " PC AI : " ; 
 				SetConsoleTextAttribute(hConsole, 7);
 				cout << "hello chloe, check your task managment app. " << endl << endl ;
+				
+				// output text and check user input(inke user chikar mikhd bokone)
 				string a[] = {"Internet" , "task managment app" , "games" , "shutdown"};
 				OutputChoices(a , 4);
 				string g;
@@ -854,7 +867,8 @@ class ZeroToUniversity{
 
 int main(){
 	ZeroToUniversity test;
+	//run the game:
 	test.start();
-	cout << "hello" ;
+	
 	return 0;
 }
