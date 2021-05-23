@@ -529,7 +529,7 @@ class ZeroToUniversity{
 			
 			//check if it is passed !
 			if(AI.pass){
-				//turnoff.rungame();
+				turnoff.rungame();
 			}
 		}
 		
