@@ -1,6 +1,6 @@
 [Project]
-FileName=AI.dev
-Name=AI
+FileName=NGP.dev
+Name=NGP
 Type=1
 Ver=2
 ObjFiles=
@@ -29,7 +29,7 @@ IncludeVersionInfo=0
 SupportXPThemes=0
 CompilerSet=0
 CompilerSettings=0000000000000000000000000
-UnitCount=10
+UnitCount=13
 
 [VersionInfo]
 Major=1
@@ -50,8 +50,18 @@ ProductVersion=
 AutoIncBuildNr=0
 SyncProduct=1
 
+[Unit11]
+FileName=main.cpp
+CompileCpp=1
+Folder=
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
 [Unit1]
-FileName=key.h
+FileName=assemble.cpp
 CompileCpp=1
 Folder=
 Compile=1
@@ -61,7 +71,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit2]
-FileName=map.cpp
+FileName=assemble.h
 CompileCpp=1
 Folder=
 Compile=1
@@ -71,7 +81,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit3]
-FileName=map.h
+FileName=key.cpp
 CompileCpp=1
 Folder=
 Compile=1
@@ -81,7 +91,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit4]
-FileName=member.cpp
+FileName=key.h
 CompileCpp=1
 Folder=
 Compile=1
@@ -91,7 +101,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit5]
-FileName=member.h
+FileName=map.cpp
 CompileCpp=1
 Folder=
 Compile=1
@@ -101,7 +111,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit6]
-FileName=random.cpp
+FileName=map.h
 CompileCpp=1
 Folder=
 Compile=1
@@ -111,7 +121,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit7]
-FileName=random.h
+FileName=member.cpp
 CompileCpp=1
 Folder=
 Compile=1
@@ -121,7 +131,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit8]
-FileName=secondstage.cpp
+FileName=member.h
 CompileCpp=1
 Folder=
 Compile=1
@@ -131,7 +141,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit9]
-FileName=security_holes.cpp
+FileName=random.cpp
 CompileCpp=1
 Folder=
 Compile=1
@@ -141,6 +151,26 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit10]
+FileName=random.h
+CompileCpp=1
+Folder=
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit12]
+FileName=security_holes.cpp
+CompileCpp=1
+Folder=
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit13]
 FileName=security_holes.h
 CompileCpp=1
 Folder=
