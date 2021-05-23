@@ -647,7 +647,7 @@ class ZeroToUniversity{
 					// private file check shude :
 					
 					// baressi konim k aya ghablan site ro hack karde ya na (ke dobare hack nakone
-					if(!goverment.rezpass){
+					if(!goverment.hesampass){
 						//befor hacking "158.58.187.219"
 						string alpha[] = {"university LMS" , "email" , "158.58.187.219" , "back"};
 						if(inbox == 1){
@@ -667,10 +667,8 @@ class ZeroToUniversity{
 							Inemail();
 						}else if(input == "3"){
 							system("cls");
-							if(goverment.rez_gamerun(0)){
+							if(goverment.hesam_gamerun()){
 								Ingoverment();
-							}else{
-								goverment.rez_game_resetloose();
 							}
 						}
 					}else{
