@@ -136,7 +136,7 @@ class ZeroToUniversity{
 				SetConsoleTextAttribute(hConsole, ai_color);
 				cout << " PC AI : " ; 
 				SetConsoleTextAttribute(hConsole, 7);
-				cout << "as you see there is some info that you can access the central park with it. \n the web address added to your browser.\n lets see what'a happeing there.'" << endl ;
+				cout << "as you see there is some info that you can access the ITO with it. \n the web address added to your browser.\n lets see what'a happeing there." << endl ;
 				
 				// private file reading from "file/privatefile.txt"
 				string alpha[20];
@@ -600,6 +600,7 @@ class ZeroToUniversity{
 				}
 			}	
 		}
+		
 		// dakhele portal vesrat fan avari. az in portal be marakez dg dastresi darim
 		void Ingoverment(){
 			while(true){
