@@ -27,7 +27,10 @@ bool assemble::baktash_gamerun(){
 	return second.get_score() > 200 ;
 }
 
-bool assemble::rez_gamerun(){
+bool assemble::rez_gamerun(int sc=0){
+	if(sc != 0){
+		first.setendemtiaz(sc);
+	}
 	first.gamerunner();
 	rezpass = first.pass;
 	return first.pass;
