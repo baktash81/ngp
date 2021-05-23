@@ -104,10 +104,10 @@ class ZeroToUniversity{
 				SetConsoleTextAttribute(hConsole, 7);
 				
 				// PC AI says:
-				cout << "so we are in iust datacenter. hey is that privat folder ?" << endl ;
+				cout << "So we are in iust datacenter. Hey is that private folder ?" << endl ;
 				
 				// user can choose on of these to go:
-				string alpha[] = { "TABLE1_STUDENTS_SCORE" , "PRIVATE FILES" , "back"};
+				string alpha[] = { "TABLE_STUDENTS_SCORE" , "PRIVATE FILES" , "back"};
 				
 				// output choices
 				OutputChoices(alpha , 3);
@@ -139,13 +139,13 @@ class ZeroToUniversity{
 				SetConsoleTextAttribute(hConsole, ai_color);
 				cout << " PC AI : " ; 
 				SetConsoleTextAttribute(hConsole, 7);
-				cout << "as you see there is some info that you can access the ITO with it. \n the web address added to your browser.\n lets see what'a happeing there." << endl ;
+				cout << "As you see there is some info that you can access the ITO with it. \n The web address added to your browser.\n Lets see what's happening there." << endl ;
 				
 				// private file reading from "file/privatefile.txt"
 				string alpha[20];
 				ifstream privatefile ("../file/privatefile.txt" );
 				if(!privatefile){
-					cout << "error file not found!" << endl ;
+					cout << "Error file not found!" << endl ;
 				}
 				string i;
 				int n = 0 ;
@@ -176,13 +176,13 @@ class ZeroToUniversity{
 				system("cls");
 				
 				// output the table
-				cout << " name : math , AP , physics " << endl;
+				cout << " Name   : math , AP , physics " << endl;
 				cout << " mohsen : "<< mohsen_math << " , " << mohsen_AP << " , " << mohsen_physic << endl ;
-				cout << " vahid : "<< vahid_math << " , " << vahid_AP << " , " << vahid_physic << endl ;
-				cout << " chloe : "<< chloe_math << " , " << chloe_AP << " , " << chloe_physic << endl ;
+				cout << " vahid  : "<< vahid_math << " , " << vahid_AP << " , " << vahid_physic << endl ;
+				cout << " chloe  : "<< chloe_math << " , " << chloe_AP << " , " << chloe_physic << endl ;
 				
 				// showing how it works:
-				cout << endl << "select to edit (example : vahid.math ) :" << endl;
+				cout << endl << "Select to edit (example : vahid.math ) :" << endl;
 				
 				// output text and check user input(inke user chikar mikhd bokone)
 				string choic[] = { "back"};
@@ -197,13 +197,13 @@ class ZeroToUniversity{
 				
 				//check if user input is true:
 				if(( input == "mohsen.math" || input == "mohsen.physics" ||input == "mohsen.AP" || input == "mohsen.ap" ||input == "vahid.AP" || input == "vahid.ap" ||input == "vahid.physics" ||input == "vahid.math" || input == "chloe.AP" || input == "chloe.ap" || input == "chloe.physics" || input == "chloe.math" )){
-					cout << "change number to : ";
+					cout << "Change number to : ";
 					cin >> changed;	
 				}else if (input == "1"){
 					// back
 				}else{
 					// user input didnt match!
-					cout << "entry didn't found!" << endl ;
+					cout << "Entry didn't found!" << endl ;
 				}
 				
 				// check for valid input for changed score
@@ -224,7 +224,7 @@ class ZeroToUniversity{
 							index = 0 ;
 						}
 						// email content (mohsen)
-						email[index] = "Mohsen : i feel my scores had changed but i dont know why";
+						email[index] = "Mohsen : I feel my scores had changed but I dont know why";
 						
 					//if vahid score is changed, sent email to him
 					}else if((input == "vahid.math" || input == "vahid.physics" || input == "vahid.AP" || input == "vahid.ap") && !vahidemailsent){
@@ -237,7 +237,7 @@ class ZeroToUniversity{
 							index = 0 ;
 						}
 						// email content (vahid)
-						email[index] = "vahid : whats wrong with LMS? my scores had changed!";
+						email[index] = "vahid : Whats wrong with LMS? my scores had changed!";
 					}
 					
 					//finally changing the score !
@@ -286,13 +286,13 @@ class ZeroToUniversity{
 				SetConsoleTextAttribute(hConsole, ai_color);
 				cout << " PC AI : " ; 
 				SetConsoleTextAttribute(hConsole, 7);
-				cout << "hey chloe ,use 'edit table' to change your scores." << endl << endl ;
+				cout << "Hey chloe ,use 'edit table' to change your scores." << endl << endl ;
 				
 				// table
-				cout << " name : math , AP , physics " << endl;
+				cout << " Name   : math , AP , physics " << endl;
 				cout << " mohsen : "<< mohsen_math << " , " << mohsen_AP << " , " << mohsen_physic << endl ;
-				cout << " vahid : "<< vahid_math << " , " << vahid_AP << " , " << vahid_physic << endl ;
-				cout << " chloe : "<< chloe_math << " , " << chloe_AP << " , " << chloe_physic << endl ;
+				cout << " vahid  : "<< vahid_math << " , " << vahid_AP << " , " << vahid_physic << endl ;
+				cout << " chloe  : "<< chloe_math << " , " << chloe_AP << " , " << chloe_physic << endl ;
 				
 				// output text and check user input(inke user chikar mikhd bokone)
 				string choic[] = {"edit table" ,"back"};
@@ -321,7 +321,7 @@ class ZeroToUniversity{
 				
 				// age nomre AP kam tar az 10 bood AI yechi dg bege :)
 				if(chloe_AP > 9){
-					cout << "everything is great! :)"<< endl << endl ;
+					cout << "Everything is great! :)"<< endl << endl ;
 				}else{
 					cout << "Ops! it seems your ap score is to slow. but i think you can hack..." << endl << endl ;
 				}
@@ -381,7 +381,7 @@ class ZeroToUniversity{
 				SetConsoleTextAttribute(hConsole, ai_color);
 				cout << " PC AI : " ; 
 				SetConsoleTextAttribute(hConsole, 7);
-				cout << "we are in LMS." << endl << endl ;	
+				cout << "We are in LMS." << endl << endl ;	
 				
 							
 				string alpha[3];
@@ -511,21 +511,21 @@ class ZeroToUniversity{
 			SetConsoleTextAttribute(hConsole, ai_color);
 			cout << " PC AI : " ; 
 			SetConsoleTextAttribute(hConsole, 7);
-			cout << "this how my programmers coded me!" << endl << endl ;
+			cout << "This how my programmers coded me!" << endl << endl ;
 			sleep(2);
 			SetConsoleTextAttribute(hConsole, ai_color);
 			cout << " PC AI : " ; 
 			SetConsoleTextAttribute(hConsole, 7);
-			cout << "goodbye..." << endl << endl ;
+			cout << "Goodbye..." << endl << endl ;
 			sleep(2);
-			cout << "(now you have to turn AI of with these security steps!)" << endl << endl ;
+			cout << "(Now you have to turn AI off with these security steps!)" << endl << endl ;
 			sleep(2);
 			
 			// clear past inputs and outputs
 			system("cls");
 			
 			// output game tips
-			cout << "this is the AI Structure use its weak points an poisen it by Injecting a code :" << endl ;
+			cout << "This is the AI Structure use its weak points an poisen it by Injecting a code :" << endl ;
 			
 			//run the "keygenerator game"
 			AI.gamerunner();
@@ -560,13 +560,13 @@ class ZeroToUniversity{
 				SetConsoleTextAttribute(hConsole, ai_color);
 				cout << " PC AI : " ; 
 				SetConsoleTextAttribute(hConsole, 7);
-				cout << "here is information :" << endl << endl ;
-				cout << "name : chloe\nlastname : clem\nlocation : 0km farther\nuser IP : 85.133.195.18\nyour IP : 85.133.195.18" << endl ;
+				cout << "Here is information :" << endl << endl ;
+				cout << "Name : chloe\nlastname : clem\nlocation : 0km farther\nuser IP : 85.133.195.18\nyour IP : 85.133.195.18" << endl ;
 				
 				SetConsoleTextAttribute(hConsole, ai_color);
 				cout << " PC AI : " ; 
 				SetConsoleTextAttribute(hConsole, 7);
-				cout << "how is it possible ? you didn't access the site ..." << endl << endl ;
+				cout << "How is it possible ? you didn't access the site ..." << endl << endl ;
 				
 				// output text and check user input(inke user chikar mikhd bokone)
 				string alpha[] = {"back"};
@@ -593,7 +593,7 @@ class ZeroToUniversity{
 				SetConsoleTextAttribute(hConsole, ai_color);
 				cout << " PC AI : " ; 
 				SetConsoleTextAttribute(hConsole, 7);
-				cout << "it seem's someone is hacking this webiste before you !" << endl << endl ;
+				cout << "It seem's someone is hacking this webiste before you !" << endl << endl ;
 				cout <<" ---------------------------------------------------" << endl ;
 				cout <<"|   -   site is being hacked by some one else    -  |" << endl ;
 				cout <<" ---------------------------------------------------" << endl ;
@@ -622,8 +622,8 @@ class ZeroToUniversity{
 				SetConsoleTextAttribute(hConsole, ai_color);
 				cout << " PC AI : " ; 
 				SetConsoleTextAttribute(hConsole, 7);
-				cout << "we have many access right now." << endl << endl ;
-				cout << "you can access these places via our platform :" << endl;
+				cout << "We have many access right now." << endl << endl ;
+				cout << "You can access these places via our platform :" << endl;
 				
 				// output text and check user input(inke user chikar mikhd bokone)
 				string alpha[] = {"bank" , "bours" , "vesarat ettelaat" ,"back"};
@@ -805,7 +805,7 @@ class ZeroToUniversity{
 				int input;
 				cin >> input;
 				if(input == number){
-					cout << "hoooray thats true!" << endl ;
+					cout << "Hoooray thats true!" << endl ;
 					sleep(2);
 					return;
 				}else if(input == -1){
