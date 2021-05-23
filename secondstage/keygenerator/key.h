@@ -31,7 +31,7 @@ class keyGenerator{
 			success = 0 ;
 			fail = 0;
 			len = 9 ;
-			pass = true;
+			pass = false;
 			emtiaz  = 0 ;
 			hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 			number_colors = 10;
@@ -63,13 +63,13 @@ void keyGenerator::gamerunner(){
 					cout << endl << endl;
 				}
 				sleep(1);
-				if(emtiaz == 40 || emtiaz == 50){
+				if(emtiaz == 20){
 					len = 10;
-				}else if(emtiaz == 60 || emtiaz== 70){
-					len = 11;
-				}else if(emtiaz == 80 || emtiaz == 90){
-					len = 12;
 				}else if(emtiaz == 30){
+					len = 11;
+				}else if(emtiaz == 40){
+					len = 12;
+				}else if(emtiaz == 50){
 					pass = true;
 					break;
 				}
