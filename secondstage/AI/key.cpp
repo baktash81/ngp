@@ -18,26 +18,33 @@ void keyGenerator::gamerunner(){
 					emtiaz = emtiaz + 10 ;
 					cout << "SCORE IS : " << emtiaz;
 					cout << endl << endl;
+					
 				}else{
 					cout << endl << "FALSE" << endl ;
 					cout << "SCORE IS : " << emtiaz;
 					cout << endl << endl;
+					loose = loose + 10 ;
 				}
 				sleep(1);
 				if(emtiaz == 20){
 					len = 10;
+				}else if (emtiaz == endemtiaz){
+					pass = true;
+					break;
 				}else if(emtiaz == 30){
 					len = 11;
 				}else if(emtiaz == 40){
 					len = 12;
 				}else if(emtiaz == 50){
-					pass = true;
-					break;
+					len = 13;
 				}
 			}
-			cout << endl << endl << "YOU WON !" << endl ;
+			
 }
-
+void keyGenerator::setendemtiaz(int input){
+	// gozashan emtiaz nahayi
+	endemtiaz = input ;
+}
 void keyGenerator::initialize(){
 			// initializing each data member each time
 			first_i = rand()%len;
