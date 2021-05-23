@@ -140,7 +140,7 @@ class ZeroToUniversity{
 				
 				// private file reading from "file/privatefile.txt"
 				string alpha[20];
-				ifstream privatefile ("file/privatefile.txt" );
+				ifstream privatefile ("../file/privatefile.txt" );
 				if(!privatefile){
 					cout << "error file not found!" << endl ;
 				}
