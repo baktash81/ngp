@@ -12,19 +12,16 @@ class ZeroToUniversity{
 		// to activate "hack the lms"
 		bool scores_checked = false;
 		
-		// lms hack method
-		//keyGenerator lms;
-		
-		// goverment hack method
-		//keyGenerator goverment;
-		
-		// AI hack method
-		//keyGenerator AI;
-		//Security_Holes turnoff;
-		//assembling all games 
+		// lms hack
 		assemble final;
+		
+		// goverment hack
 		assemble goverment;
+		
+		// AI turn off
 		assemble AI;
+		
+		
 		// score of chloe classmates and her too(first amount of "score table")
 		int vahid_math = 18 ;
 		int vahid_AP = 19 ;
@@ -424,8 +421,8 @@ class ZeroToUniversity{
 						}else if(input == "3"){
 							return;
 						}else if(input == "2"){
-							
-							if(final.rez_gamerun()){
+							system("cls");
+							if(final.rez_gamerun(30)){
 								Indocs();
 							}
 						}
@@ -667,7 +664,7 @@ class ZeroToUniversity{
 						}else if(input == "2"){
 							Inemail();
 						}else if(input == "3"){
-							
+							system("cls");
 							if(goverment.rez_gamerun()){
 								Ingoverment();
 							}
