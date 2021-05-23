@@ -4,13 +4,26 @@
 #include <cstdlib> // random
 #include <unistd.h> //sleep
 #include <windows.h> //changing the color
+#include <fstream>
 #include "keygenerator/key.h"
+#include "../minigames/find_security_holes/security_holes.h"
 using namespace std;
 class ZeroToUniversity{
 	public:
+		// to activate "hack the lms"
 		bool scores_checked = false;
+		
+		// lms hack method
 		keyGenerator lms;
+		
+		// goverment hack method
 		keyGenerator goverment;
+		
+		// AI hack method
+		keyGenerator AI;
+		Security_Holes turnoff;
+		
+		// score of chloe classmates and her too(first amount of "score table")
 		int vahid_math = 18 ;
 		int vahid_AP = 19 ;
 		int vahid_physic = 16;
@@ -20,52 +33,89 @@ class ZeroToUniversity{
 		int chloe_math = 18 ;
 		int chloe_AP = 2;
 		int chloe_physic = 14 ;
+		
+		// email inbox
 		string email[3];
 		int inbox;
+		
+		// to check which index of inbox should be filled
 		bool mohsenemailsent;
 		bool vahidemailsent;
+		
+		// to activate hack the 158.58.187.219
 		bool privatefilechecked;
+		
+		// "PC AI" color
 		int ai_color;
 		HANDLE  hConsole;
+		
+		// constructor
 		ZeroToUniversity(){
+			// first value of email inbox
 			email[0] = "NONE" ;
 			email[1] = "NONE" ;
 			inbox = 0;
 			mohsenemailsent = false;
 			vahidemailsent =false;
 			privatefilechecked = false;
+			
+			// red color for phrase "PC AI"
 			ai_color = 12 ;
+			
 			hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 		}
+		
+		// simple function just to print all choices in one form
 		void OutputChoices(string choices[] , int len){
 
 			for(int i = 0 ; i < len ; i++){
 				cout << endl <<char(219) << char(219) << char(219) << char(219) << char(219) << char(219) << " " << i+1 <<" :" << choices[i] << endl ;
 			}
 		}
+		
+		// simple function just to print all Text in one form
 		void OutputText(string choices[] , int len){
 			cout << endl ;
 			for(int i = 0 ; i < len ; i++){
 				cout << char(219) << char(219) << char(219) << char(219) << char(219) << char(219) << " " << choices[i] << endl ;
 			}
 		}
+		
+		// one Input place for all rooms
 		void Inputplace(){
 			cout << endl <<  "INPUT: " ;
 		}
+		
+		// LMS database:
 		void Indocs(){
 			while(true){
+				// clear past inputs and outputs
 				system("cls");
+				
+				// changing the output color to red
 				SetConsoleTextAttribute(hConsole, ai_color);
+				
 				cout << "PC AI : " ; 
+				
+				// change color to defualt color(7)
 				SetConsoleTextAttribute(hConsole, 7);
+				
+				// PC AI says:
 				cout << "so we are in iust datacenter. hey is that privat folder ?" << endl ;
+				
+				// user can choose on of these to go:
 				string alpha[] = { "TABLE1_STUDENTS_SCORE" , "PRIVATE FILES" , "back"};
+				
+				// output choices
 				OutputChoices(alpha , 3);
+				
 				string input;
 				Inputplace();
+				
+				// get the users input(inju karbar tasmim migire ke koja bere)
 				getline(cin , input);
 				
-				
+				//check users input and call the function
 				if(input == "3"){
 					return;
 				}else if(input == "2"){
@@ -75,15 +125,17 @@ class ZeroToUniversity{
 				}
 			}
 		}
+		
+		// private files
 		void PrivateFiles(){
 			while(true){
 				system("cls");
-				//cout << "private files" << endl ;
 				SetConsoleTextAttribute(hConsole, ai_color);
 				cout << " PC AI : " ; 
 				SetConsoleTextAttribute(hConsole, 7);
 				cout << "as you see there is some info that you can access the central park with it. \n the web address added to your browser.\n lets see what'a happeing there.'" << endl ;
 				string alpha[] = { "hello" , "Dont visit this website : 158.58.187.219 "};
+				ofstream privatefile("file/privatefile.txt" , ios::in || )
 				OutputText(alpha , 2);
 				privatefilechecked = true;
 				string choic[] = {"back"};
@@ -349,6 +401,34 @@ class ZeroToUniversity{
 				}
 			}
 		}
+		
+		//final stage
+		void TurnAiOff(){
+			system("cls");
+			SetConsoleTextAttribute(hConsole, ai_color);
+			cout << " PC AI : " ; 
+			SetConsoleTextAttribute(hConsole, 7);
+			cout << "I'm sorry, I had to use that private data to hack VAJA." << endl << endl ;
+			sleep(2);
+			SetConsoleTextAttribute(hConsole, ai_color);
+			cout << " PC AI : " ; 
+			SetConsoleTextAttribute(hConsole, 7);
+			cout << "this how my programmers coded me!" << endl << endl ;
+			sleep(2);
+			SetConsoleTextAttribute(hConsole, ai_color);
+			cout << " PC AI : " ; 
+			SetConsoleTextAttribute(hConsole, 7);
+			cout << "goodbye..." << endl << endl ;
+			sleep(2);
+			cout << "(now you have to turn AI of with these security steps!)" << endl << endl ;
+			sleep(2);
+			system("cls");
+			cout << "this is the AI Structure use its weak points an poisen it by Injecting a code :" << endl ;
+			AI.gamerunner();
+			if(AI.pass){
+				turnoff.rungame();
+			}
+		}
 		void Inhackinfo(){
 			while(true){
 				system("cls");
@@ -376,11 +456,9 @@ class ZeroToUniversity{
 				Inputplace();
 				getline(cin , input);
 				if(input == "1"){
-					return;
+					TurnAiOff();
 				}
 			}
-		}
-		~ZeroToUniversity(){
 		}
 		void Invaja(){
 			while(true){
