@@ -15,7 +15,7 @@ class assemble{
 	Security_Holes second;
 	assemble();
 	void gamelogic();
-	bool rez_gamerun();
+	bool rez_gamerun(int=0);
 	bool baktash_gamerun();
 	void hesam_gamerun();
 };
