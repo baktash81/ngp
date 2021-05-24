@@ -497,7 +497,20 @@ class ZeroToUniversity{
 				}
 			}
 		}
-		
+		//safhe akhar ke neshun bedim bord ya na !
+		void finalpage(){
+			if(AI.firststagepass){
+				cout <<" ---------------------------------------------------" << endl ;
+				cout <<"|   -          :) AI is down. you won :)           -  |" << endl ;
+				cout <<" ---------------------------------------------------" << endl ;
+				exit(0);
+			}else{
+				cout <<" ---------------------------------------------------" << endl ;
+				cout <<"|   -          :( AI stole the date. :(           -  |" << endl ;
+				cout <<" ---------------------------------------------------" << endl ;
+				exit(0);
+			}
+		}
 		//final stage (az inju be baad bayad AI ro khamush koni !
 		void TurnAiOff(){
 			// clear past inputs and outputs
@@ -529,6 +542,7 @@ class ZeroToUniversity{
 			cout << "This is the AI Structure use its weak points an poisen it by Injecting a code :" << endl ;
 			
 			AI.gamelogic();
+			finalpage();
 		}
 		
 		// showning the hackers info
