@@ -856,7 +856,7 @@ class ZeroToUniversity{
 				SetConsoleTextAttribute(hConsole, ai_color);
 				cout << " PC AI : " ; 
 				SetConsoleTextAttribute(hConsole, 7);
-				color + 110 ;
+				color + 7 ;
 				cout << "hello chloe, check your task managment app. " << endl << endl ;
 				
 				// output text and check user input(inke user chikar mikhd bokone)
