@@ -38,7 +38,7 @@ int Security_Holes::get_score() const {
 }
 
 void Security_Holes::rungame() {
-    srand(2);
+    
     while(true) {
         status=false;
         cout << "Enter the level (level 1 : 50 scores, level 2 : 100 scores) :  ";
