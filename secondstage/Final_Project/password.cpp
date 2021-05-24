@@ -12,6 +12,7 @@ using namespace std;
 		hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 		pass = false;
 		warning=0;
+		srand (0);
 	}
 	void GameThree::input(){
 		cin >> Key_Suggest;
@@ -36,7 +37,7 @@ using namespace std;
 
 	}
 	string GameThree::generate_Key(){
-		srand (0);
+		
 		int charNum1 = ((rand() % 26) + 1)+64;
 		MainKey.push_back(char(charNum1));
 		int charNum2 = rand() % 10 ;
