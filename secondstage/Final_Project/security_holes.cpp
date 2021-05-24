@@ -57,7 +57,7 @@ void Security_Holes::rungame() {
         if(lvl==1) {
             c1 = m.get_position();
             if (p == c1 ) {
-                cout << "Correct :)" << endl;
+                cout << "Correct :)"<<endl<<"Your score in this game is : "<<score<<endl;
                 score+=50;
             }
             else
@@ -67,26 +67,15 @@ void Security_Holes::rungame() {
             c1.append(m.get_str(0));c1.append(m.get_str(1));
             c2.append(m.get_str(1));c2.append(m.get_str(0));
             if(p==c1 || p==c2) {
-                cout << "Correct :)" << endl;
+                cout << "Correct :)" <<endl<<"Your score in this game is : "<<score<<endl;
                 score+=100;
             }
             else
                 cout << "Incorrect :(" << endl;
         }
-        while(true) {
-            cout <<"Your score is : "<<score<<endl<< "Would you like to play again?(y,n) :  ";
-            cin >> yn;
-            if (yn == "N" || yn == "n") {
-                status = true;
-                break;
-            }
-            else if (yn == "y" || yn == "Y")
-                break;
-            else
-                continue;
-        }
-        if (status)
-            break;
+		if(score>=reach_score)
+			break;
+
 
     }
 }

@@ -16,7 +16,7 @@ void assemble::gamelogic(){
 	}
 	if(second.get_score() > 200){
 		cout <<" ---------------------------------------------------" << endl ;
-		cout <<"|   -           AI is down. you won :)           -  |" << endl ;
+		cout <<"|   -          :) AI is down. you won :)           -  |" << endl ;
 		cout <<" ---------------------------------------------------" << endl ;
 	}
 }
