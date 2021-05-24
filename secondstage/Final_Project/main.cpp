@@ -773,7 +773,7 @@ class ZeroToUniversity{
 				cout << "here is your tasks:" << endl ;
 				
 				// output text and check user input(inke user chikar mikhd bokone)
-				string test[] = {"check your scores in LMS" , "study for phisycs" , "study for math" , "depression test"};
+				string test[] = {"Check your scores in LMS" , "Study for physics" , "Study for math" , "Depression test"};
 				OutputText(test , 4);
 				string a[] = {"back"};
 				OutputChoices(a , 1);
