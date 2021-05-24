@@ -27,13 +27,20 @@ bool assemble::baktash_gamerun(){
 	return second.get_score() > 200 ;
 }
 
-bool assemble::rez_gamerun(){
+bool assemble::rez_gamerun(int sc){
+	if(sc != 0){
+		first.setendemtiaz(sc);
+	}
 	first.gamerunner();
 	rezpass = first.pass;
 	return first.pass;
 }
-
-void assemble::hesam_gamerun(){
-	
+void assemble::rez_game_resetloose(){
+	first.resetloose();
+}
+bool assemble::hesam_gamerun(){
+	third.gamerunner();
+	hesampass = third.pass;
+	return hesampass;
 }
 
