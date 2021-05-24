@@ -11,14 +11,25 @@ class assemble{
 	bool rezpass;
 	bool bakpass;
 	bool hesampass;
-	keyGenerator first;
+	
+	//final stage:
+	bool firststagepass;
+	bool secondstagepass;
+	bool thirdstagepass;
+	
+	
+	keyGenerator lms;
 	Security_Holes second;
-	GameThree third;
+	GameThree goverment;
+	
+	GameThree AIoff;
+	keyGenerator final ;
+	
 	assemble();
 	void gamelogic();
 	bool rez_gamerun(int);
 	void rez_game_resetloose();
-	bool baktash_gamerun();
+	bool baktash_gamerun(int);
 	bool hesam_gamerun();
 };
 #endif
