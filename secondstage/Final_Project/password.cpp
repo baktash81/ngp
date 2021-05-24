@@ -12,7 +12,7 @@ using namespace std;
 		hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 		pass = false;
 		warning=0;
-		srand (0);
+		
 	}
 	void GameThree::input(){
 		cin >> Key_Suggest;
@@ -31,7 +31,7 @@ using namespace std;
 	void GameThree::print_1(){	
 		//cout << "NOTICE : PASSWORD CONSISTED OF THREE CHARACTERS."<<'\n'<<"First character:CAPITAL ENGLISH WORD"<<'\n'<<"Second character:Number"<<'\n'<<"Second character:Number"<<endl;
 		//cout<<"====================="<<'\n'<<'\n'<<endl;
-		cout << "(guess the password !)" << endl ;
+		//cout << "(guess the password !)" << endl ;
 		cout << "Please Enter Password:"<<endl;
 		cout << char(219)<<' '<<char(219)<<' '<<char(219)<<endl;			
 
