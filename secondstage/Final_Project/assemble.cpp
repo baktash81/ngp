@@ -10,18 +10,19 @@ assemble::assemble(){
 
 void assemble::gamelogic(){
 	//first game :
-	first.gamerunner();
-	if(first.pass){
+	final.gamerunner();
+	firststagepass = final.pass;
+	
+	if(final.pass){
+		second.set_reach_score(200);
 		second.rungame();
+		goverment.gamerunner();	
 	}
-	if(second.get_score() > 200){
-		cout <<" ---------------------------------------------------" << endl ;
-		cout <<"|   -          :) AI is down. you won :)           -  |" << endl ;
-		cout <<" ---------------------------------------------------" << endl ;
-	}
+	
 }
 
-bool assemble::baktash_gamerun(){
+bool assemble::baktash_gamerun(int input){
+	second.set_reach_score(input);
 	second.rungame();
 	bakpass = (second.get_score() > 200);
 	return second.get_score() > 200 ;
@@ -29,18 +30,18 @@ bool assemble::baktash_gamerun(){
 
 bool assemble::rez_gamerun(int sc){
 	if(sc != 0){
-		first.setendemtiaz(sc);
+		lms.setendemtiaz(sc);
 	}
-	first.gamerunner();
-	rezpass = first.pass;
-	return first.pass;
+	lms.gamerunner();
+	rezpass = lms.pass;
+	return lms.pass;
 }
 void assemble::rez_game_resetloose(){
-	first.resetloose();
+	lms.resetloose();
 }
 bool assemble::hesam_gamerun(){
-	third.gamerunner();
-	hesampass = third.pass;
+	goverment.gamerunner();
+	hesampass = goverment.pass;
 	return hesampass;
 }
 
