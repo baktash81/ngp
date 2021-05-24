@@ -532,14 +532,13 @@ class ZeroToUniversity{
 			SetConsoleTextAttribute(hConsole, 7);
 			cout << "Goodbye..." << endl << endl ;
 			sleep(2);
-			cout << "(Now you have to turn AI off with these security steps!)" << endl << endl ;
-			sleep(2);
+			
 			
 			// clear past inputs and outputs
 			system("cls");
 			
 			// output game tips
-			cout << "This is the AI Structure use its weak points an poisen it by Injecting a code :" << endl ;
+			
 			
 			AI.gamelogic();
 			finalpage();
@@ -880,6 +879,7 @@ class ZeroToUniversity{
 
 int main(){
 	ZeroToUniversity test;
+	srand(12);
 	//run the game:
 	test.start();
 	
