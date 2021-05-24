@@ -6,6 +6,7 @@
 #include <windows.h> //changing the color
 #include <fstream>
 #include "assemble.h"
+#include "style.h"
 using namespace std;
 class ZeroToUniversity{
 	public:
@@ -21,7 +22,7 @@ class ZeroToUniversity{
 		// AI turn off
 		assemble AI;
 		
-		
+		style color;
 		// score of chloe classmates and her too(first amount of "score table")
 		int hesam_math = 18 ;
 		int hesam_AP = 19 ;
@@ -855,6 +856,7 @@ class ZeroToUniversity{
 				SetConsoleTextAttribute(hConsole, ai_color);
 				cout << " PC AI : " ; 
 				SetConsoleTextAttribute(hConsole, 7);
+				color + 110 ;
 				cout << "hello chloe, check your task managment app. " << endl << endl ;
 				
 				// output text and check user input(inke user chikar mikhd bokone)
