@@ -10,12 +10,21 @@ assemble::assemble(){
 
 void assemble::gamelogic(){
 	//first game :
+	cout << "(Now you have to turn AI off with these security steps!)" << endl << endl ;
+	sleep(2);
+	cout << "This is the AI Structure use its weak points an poisen it by Injecting a code :" << endl ;
+	cout << "YOU HAVE TO REACH TO SCORE 50 TO PASS." << endl ;
 	final.gamerunner();
 	firststagepass = final.pass;
 	
-	if(final.pass){
+	system("cls");
+	if(firststagepass){
+		cout << "Find the security holes :" << endl ;
+		cout << "YOU HAVE TO REACH TO SCORE 200 TO PASS." << endl ;
 		second.set_reach_score(200);
 		second.rungame();
+		system("cls");
+		cout << "NO LIMITS JUST GUESS THE FINAL PASS (3 chars , first uppercase alphabet, two others integer) :" << endl ;
 		goverment.gamerunner();	
 	}
 	
