@@ -40,7 +40,6 @@ void keyGenerator::gamerunner(){
 				}
 				
 				if (loose == 3){
-					cout << "game over :(" << endl ;
 					pass = false;
 					break;
 				}
