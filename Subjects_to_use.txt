@@ -1,13 +1,13 @@
-1. using files (sequential,random accessing)
+1. using files (sequential,random accessing) (done)
 
-2. operator overloading 
+2. operator overloading (done)
 
 3. templates
 
-4. friend class/functions
+4. friend class/functions (done)
 
 5. proxy classes
 
-6. getter / setter member functions
+6. getter / setter member functions (done)
 
-7. static data members 
+7. static data members (done)
