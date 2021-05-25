@@ -23,15 +23,15 @@ class ZeroToUniversity{
 		
 		style color;
 		// score of chloe classmates and her too(first amount of "score table")
-		int hesam_math = 18 ;
-		int hesam_AP = 19 ;
-		int hesam_physic = 16;
-		int baktash_math = 19;
-		int baktash_AP = 18;
-		int baktash_physic = 17 ;
-		int chloe_math = 18 ;
-		int chloe_AP = 2;
-		int chloe_physic = 14 ;
+		static int hesam_math = 18 ;
+		static int hesam_AP = 19 ;
+		static int hesam_physic = 16;
+		static int baktash_math = 19;
+		static int baktash_AP = 18;
+		static int baktash_physic = 17 ;
+		static int chloe_math = 18 ;
+		static int chloe_AP = 2;
+		static int chloe_physic = 14 ;
 		
 		// email inbox
 		string email[3];
@@ -792,9 +792,9 @@ class ZeroToUniversity{
 			cout << "guess a number (1 - 100): ";
 			
 			// addad tasdofi ke bayad hads zade beshe
-			int number = rand()%100 ;
+			float number = rand()%100 ;
 			while(true){
-				int input;
+				float input;
 				cin >> input;
 				if(input == number){
 					cout << "Hoooray thats true!" << endl ;
