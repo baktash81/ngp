@@ -14,9 +14,6 @@ class assemble{
 	
 	//final stage:
 	bool firststagepass;
-	bool secondstagepass;
-	bool thirdstagepass;
-	
 	
 	keyGenerator lms;
 	Security_Holes second;
