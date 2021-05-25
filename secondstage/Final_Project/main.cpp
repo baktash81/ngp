@@ -46,10 +46,6 @@ class ZeroToUniversity{
 		
 		// "PC AI" color
 		int ai_color;
-		
-		
-		//second game pass (security hole)
-		bool sec_pass;
 		// constructor
 	public:
 		ZeroToUniversity(){
@@ -61,7 +57,6 @@ class ZeroToUniversity{
 			hesamemailsent =false;
 			privatefilechecked = false;
 			
-			sec_pass = false;
 			// red color for phrase "PC AI"
 			ai_color = 12 ;
 		}
