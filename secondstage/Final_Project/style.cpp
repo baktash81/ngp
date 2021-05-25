@@ -4,7 +4,6 @@
 style::style(){
 	hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 }
-
 void style::operator+ (int input){
 	SetConsoleTextAttribute(hConsole, input);
 }
