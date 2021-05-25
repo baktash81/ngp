@@ -96,13 +96,11 @@ class ZeroToUniversity{
 				system("cls");
 				
 				// changing the output color to red
-				SetConsoleTextAttribute(hConsole, ai_color);
-				
+				color+ai_color ;
 				cout << "PC AI : " ; 
 				
 				// change color to defualt color(7)
-				SetConsoleTextAttribute(hConsole, 7);
-				
+				color + 7 ;
 				// PC AI says:
 				cout << "So we are in iust datacenter. Hey is that private folder ?" << endl ;
 				
@@ -136,9 +134,9 @@ class ZeroToUniversity{
 				system("cls");
 				
 				// AI output
-				SetConsoleTextAttribute(hConsole, ai_color);
+				color + ai_color ;
 				cout << " PC AI : " ; 
-				SetConsoleTextAttribute(hConsole, 7);
+				color + 7 ;
 				cout << "As you see there is some info that you can access the ITO with it. \n The web address added to your browser.\n Lets see what's happening there." << endl ;
 				
 				// private file reading from "file/privatefile.txt"
@@ -283,9 +281,9 @@ class ZeroToUniversity{
 				system("cls");
 				
 				// AI output
-				SetConsoleTextAttribute(hConsole, ai_color);
+				color + ai_color ;
 				cout << " PC AI : " ; 
-				SetConsoleTextAttribute(hConsole, 7);
+				color + 7 ;
 				cout << "Hey chloe ,use 'edit table' to change your scores." << endl << endl ;
 				
 				// table
@@ -315,9 +313,9 @@ class ZeroToUniversity{
 				system("cls");
 				
 				// AI output:
-				SetConsoleTextAttribute(hConsole, ai_color);
+				color + ai_color ;
 				cout << " PC AI : " ; 
-				SetConsoleTextAttribute(hConsole, 7);
+				color + 7 ;
 				
 				// age nomre AP kam tar az 10 bood AI yechi dg bege :)
 				if(chloe_AP > 9){
@@ -332,31 +330,31 @@ class ZeroToUniversity{
 				
 				// changing the color if the scores if it is less than 10 :)
 				if(chloe_math > 9){
-					SetConsoleTextAttribute(hConsole, 10);
+					color + 10 ;
 					cout << char(219) << char(219) << char(219) << char(219) << char(219) << char(219) << " " << "math" <<" : " << chloe_math << endl ;
 				}else{
-					SetConsoleTextAttribute(hConsole, 12);
+					color + 12 ;
 					cout << char(219) << char(219) << char(219) << char(219) << char(219) << char(219) << " " << "math" <<" : " << chloe_math << endl ;
 				}
 				
 				if(chloe_AP > 9){
-					SetConsoleTextAttribute(hConsole, 10);
+					color + 10 ;
 					cout << char(219) << char(219) << char(219) << char(219) << char(219) << char(219) << " " << "AP" <<" : " << chloe_AP << endl ;
 				}else{
-					SetConsoleTextAttribute(hConsole, 12);
+					color + 12 ;
 					cout << char(219) << char(219) << char(219) << char(219) << char(219) << char(219) << " " << "AP" <<" : " << chloe_AP << endl ;
 				}
 				
 				if(chloe_physic > 9){
-					SetConsoleTextAttribute(hConsole, 10);
+					color + 10 ;
 					cout << char(219) << char(219) << char(219) << char(219) << char(219) << char(219) << " " << "physics" <<" : " << chloe_physic << endl ;
 				}else{
-					SetConsoleTextAttribute(hConsole, 12);
+					color + 12 ;
 					cout << char(219) << char(219) << char(219) << char(219) << char(219) << char(219) << " " << "physics" <<" : " << chloe_physic << endl ;
 				}
 				
 				//defualt output color
-				SetConsoleTextAttribute(hConsole, 7);
+				color + 7 ;
 				
 				// output text and check user input(inke user chikar mikhd bokone)
 				string alpha[] = {"back"};
@@ -378,9 +376,9 @@ class ZeroToUniversity{
 				system("cls");
 				
 				// AI output:
-				SetConsoleTextAttribute(hConsole, ai_color);
+				color + ai_color ;
 				cout << " PC AI : " ; 
-				SetConsoleTextAttribute(hConsole, 7);
+				color + 7 ;
 				cout << "We are in LMS." << endl << endl ;	
 				
 							
@@ -460,9 +458,9 @@ class ZeroToUniversity{
 				system("cls");
 				
 				// AI output:
-				SetConsoleTextAttribute(hConsole, ai_color);
+				color + ai_color ;
 				cout << " PC AI : " ; 
-				SetConsoleTextAttribute(hConsole, 7);
+				color + 7 ;
 				cout << "!!! ACCESS DENIED !!!" << endl << endl ;				
 				
 				// output text and check user input(inke user chikar mikhd bokone)
@@ -482,9 +480,9 @@ class ZeroToUniversity{
 				system("cls");
 				
 				// AI output:
-				SetConsoleTextAttribute(hConsole, ai_color);
+				color + ai_color ;
 				cout << " PC AI : " ; 
-				SetConsoleTextAttribute(hConsole, 7);
+				color + 7 ;
 				cout << "!!! ACCESS DENIED !!!" << endl << endl ;
 				
 				// output text and check user input(inke user chikar mikhd bokone)
@@ -518,19 +516,19 @@ class ZeroToUniversity{
 			system("cls");
 			
 			// AI output:
-			SetConsoleTextAttribute(hConsole, ai_color);
+			color + ai_color ;
 			cout << " PC AI : " ; 
-			SetConsoleTextAttribute(hConsole, 7);
+			color + 7 ;
 			cout << "I'm sorry, I had to use that private data to hack VAJA." << endl << endl ;
 			sleep(2);
-			SetConsoleTextAttribute(hConsole, ai_color);
+			color + ai_color ;
 			cout << " PC AI : " ; 
-			SetConsoleTextAttribute(hConsole, 7);
+			color + 7 ;
 			cout << "This how my programmers coded me!" << endl << endl ;
 			sleep(2);
-			SetConsoleTextAttribute(hConsole, ai_color);
+			color + ai_color ;
 			cout << " PC AI : " ; 
-			SetConsoleTextAttribute(hConsole, 7);
+			color + 7 ;
 			cout << "Goodbye..." << endl << endl ;
 			sleep(2);
 			
@@ -552,21 +550,21 @@ class ZeroToUniversity{
 				system("cls");
 				
 				// AI output:
-				SetConsoleTextAttribute(hConsole, ai_color);
+				color + ai_color ;
 				cout << " PC AI : " ; 
-				SetConsoleTextAttribute(hConsole, 7);
+				color + 7 ;
 				cout << "let me get it for you" << endl << endl ;
 				cout << "loading..." << endl ;
 				sleep(2);
-				SetConsoleTextAttribute(hConsole, ai_color);
+				color + ai_color ;
 				cout << " PC AI : " ; 
-				SetConsoleTextAttribute(hConsole, 7);
+				color + 7 ;
 				cout << "Here is information :" << endl << endl ;
 				cout << "Name : chloe\nlastname : clem\nlocation : 0km farther\nuser IP : 85.133.195.18\nyour IP : 85.133.195.18" << endl ;
 				
-				SetConsoleTextAttribute(hConsole, ai_color);
+				color + ai_color ;
 				cout << " PC AI : " ; 
-				SetConsoleTextAttribute(hConsole, 7);
+				color + 7 ;
 				cout << "How is it possible ? you didn't access the site ..." << endl << endl ;
 				
 				// output text and check user input(inke user chikar mikhd bokone)
@@ -591,9 +589,9 @@ class ZeroToUniversity{
 				cout << endl <<" ---------------------------------------------------" << endl ;
 				cout <<"|      -    YOU CAN'T ACCESS THIS WEBSITE     -     |" << endl ;
 				cout <<" ---------------------------------------------------" << endl << endl ;
-				SetConsoleTextAttribute(hConsole, ai_color);
+				color + ai_color ;
 				cout << " PC AI : " ; 
-				SetConsoleTextAttribute(hConsole, 7);
+				color + 7 ;
 				cout << "It seem's someone is hacking this webiste before you !" << endl << endl ;
 				cout <<" ---------------------------------------------------" << endl ;
 				cout <<"|   -   site is being hacked by some one else    -  |" << endl ;
@@ -620,9 +618,9 @@ class ZeroToUniversity{
 				system("cls");
 				
 				// AI output:
-				SetConsoleTextAttribute(hConsole, ai_color);
+				color + ai_color ;
 				cout << " PC AI : " ; 
-				SetConsoleTextAttribute(hConsole, 7);
+				color + 7 ;
 				cout << "We have many access right now." << endl << endl ;
 				cout << "You can access these places via our platform :" << endl;
 				
@@ -651,9 +649,9 @@ class ZeroToUniversity{
 				system("cls");
 				
 				// AI output:
-				SetConsoleTextAttribute(hConsole, ai_color);
+				color + ai_color ;
 				cout << " PC AI : " ; 
-				SetConsoleTextAttribute(hConsole, 7);
+				color + 7 ;
 				cout << "Internet is open ! choose the site you want to go: " << endl << endl ;
 				
 				//baressi konim ke aya private file check shude ke basesh site "158.58.187.219" in ro baz konim ya na
@@ -766,9 +764,9 @@ class ZeroToUniversity{
 				system("cls");
 				
 				// AI output:
-				SetConsoleTextAttribute(hConsole, ai_color);
+				color + ai_color ;
 				cout << " PC AI : " ; 
-				SetConsoleTextAttribute(hConsole, 7);
+				color + 7 ;
 				cout << "let's do from the first !" << endl << endl ;
 				cout << "here is your tasks:" << endl ;
 				
@@ -794,9 +792,9 @@ class ZeroToUniversity{
 			system("cls");
 			
 			// AI output:
-			SetConsoleTextAttribute(hConsole, ai_color);
+			color + ai_color ;
 			cout << " PC AI : " ; 
-			SetConsoleTextAttribute(hConsole, 7);
+			color + 7 ;
 			cout << "enter -1 to exit" << endl << endl ;
 			cout << "guess a number (1 - 100): ";
 			
@@ -827,9 +825,9 @@ class ZeroToUniversity{
 				system("cls");
 				
 				// AI output
-				SetConsoleTextAttribute(hConsole, ai_color);
+				color + ai_color ;
 				cout << " PC AI : " ; 
-				SetConsoleTextAttribute(hConsole, 7);
+				color + 7 ;
 				cout << "games folder is open" << endl << endl ;
 				
 				// output text and check user input(inke user chikar mikhd bokone)
@@ -853,10 +851,11 @@ class ZeroToUniversity{
 				system("cls");
 				
 				// AI output
-				SetConsoleTextAttribute(hConsole, ai_color);
+				color + ai_color ;
 				cout << " PC AI : " ; 
-				SetConsoleTextAttribute(hConsole, 7);
 				color + 7 ;
+				
+				
 				cout << "hello chloe, check your task managment app. " << endl << endl ;
 				
 				// output text and check user input(inke user chikar mikhd bokone)
