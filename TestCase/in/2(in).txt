@@ -1,0 +1,12 @@
+// search the desktop
+3(game desktop)
+1(guess the number)
+12(first guess)
+80(second guess)
+77(third and last game)
+2(back)
+2(task manager)
+1(back)
+1(internet)
+3(back)
+4(shutdown)
