@@ -3,13 +3,12 @@
 #include <string>
 #include <cstdlib> // random
 #include <unistd.h> //sleep
-#include <windows.h> //changing the color
 #include <fstream>
 #include "assemble.h"
 #include "style.h"
 using namespace std;
 class ZeroToUniversity{
-	public:
+	private:
 		// to activate "hack the lms"
 		bool scores_checked = false;
 		
@@ -47,11 +46,12 @@ class ZeroToUniversity{
 		
 		// "PC AI" color
 		int ai_color;
-		HANDLE  hConsole;
+		
 		
 		//second game pass (security hole)
 		bool sec_pass;
 		// constructor
+	public:
 		ZeroToUniversity(){
 			// first value of email inbox
 			email[0] = "NONE" ;
@@ -64,10 +64,8 @@ class ZeroToUniversity{
 			sec_pass = false;
 			// red color for phrase "PC AI"
 			ai_color = 12 ;
-			
-			hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 		}
-		
+	private:
 		// simple function just to print all choices in one form
 		void OutputChoices(string choices[] , int len){
 
@@ -845,6 +843,7 @@ class ZeroToUniversity{
 		}
 		
 		//desktop
+	public:
 		void start(){
 			while(true){
 				// clear past inputs and outputs
