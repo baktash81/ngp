@@ -21,7 +21,7 @@ int tonum(string str){
 bool isDigit(string s){
 	// check the string is number or not
 	for(int i=0;i<s.size();i++){
-		if(isdigit(s[i])==false)
+		if(isdigit(s[i])==false||s[i]=='.')
 			return false;
 	}
 	return true;
