@@ -214,10 +214,8 @@ class ZeroToUniversity{
 				Inputplace();
 				getline(cin , input);
 					
-				int changed = 0; 
-				
-				///////////////////// template needed/////////////////////////
-				
+				string changed ; 
+								
 				//check if user input is true:
 				if(( input == "baktash.math" || input == "baktash.physics" ||input == "baktash.AP" || input == "baktash.ap" ||input == "hesam.AP" || input == "hesam.ap" ||input == "hesam.physics" ||input == "hesam.math" || input == "chloe.AP" || input == "chloe.ap" || input == "chloe.physics" || input == "chloe.math" )){
 					cout << "Change number to : ";
@@ -230,12 +228,17 @@ class ZeroToUniversity{
 				}
 				
 				// check for valid input for changed score
-				if(changed < 0 || changed > 20){
-					cout << "input incorect !" << endl ;
+				if(!(isDigit(changed))){
+					cout << "input incorect ! (just integet)" << endl ;
 					input = "p" ;
 					sleep(2);
 				}else {
-					
+					int edit = tonum(changed);
+					if(edit > 20){
+						cout << "number should be lower than 20 :/" << endl;
+						input = "p";
+						sleep(2);
+					}
 					//if baktash score is changed, sent email to him
 					if((input == "baktash.math" || input == "baktash.physics" || input == "baktash.AP" || input == "baktash.ap") && !baktashemailsent ){
 						baktashemailsent = true;
@@ -251,31 +254,31 @@ class ZeroToUniversity{
 					
 					//finally changing the score !
 					if(input == "baktash.math"){
-						baktash_math = changed;
+						baktash_math = edit;
 						
 					}else if(input == "baktash.physics"){
-						baktash_physic = changed;
+						baktash_physic = edit;
 						
 					}else if(input == "baktash.AP" || input == "baktash.ap" ){
-						baktash_AP = changed;
+						baktash_AP = edit;
 						
 					}else if(input == "hesam.AP" || input == "hesam.ap"){
-						hesam_AP = changed;
+						hesam_AP = edit;
 						
 					}else if(input == "hesam.physics"){
-						hesam_physic = changed;
+						hesam_physic = edit;
 						
 					}else if(input == "hesam.math"){
-						hesam_math = changed;
+						hesam_math = edit;
 						
 					}else if(input == "chloe.AP" || input == "chloe.ap"){
-						chloe_AP = changed;
+						chloe_AP = edit;
 						
 					}else if(input == "chloe.physics"){
-						chloe_physic = changed;
+						chloe_physic = edit;
 						
 					}else if(input == "chloe.math"){
-						chloe_math = changed;
+						chloe_math = edit;
 						
 					}else if (input == "1"){
 						return;
@@ -798,7 +801,6 @@ class ZeroToUniversity{
 		
 		//simple desktopgame (guess the password)
 		void guessthenumber(){
-			/////////////////// template needed /////////////////////////
 			
 			// clear past inputs and outputs
 			system("cls");
