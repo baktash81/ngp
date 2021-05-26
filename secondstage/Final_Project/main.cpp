@@ -513,6 +513,8 @@ class ZeroToUniversity{
 		//safhe akhar ke neshun bedim bord ya na !
 		void finalpage(){
 			if(AI.firststagepass){
+				color + 112;
+				cout << "Well Done !" << endl ;
 				cout <<" ---------------------------------------------------" << endl ;
 				cout <<"|   -          :) AI is down. you won :)           -  |" << endl ;
 				cout <<" ---------------------------------------------------" << endl ;
@@ -555,6 +557,7 @@ class ZeroToUniversity{
 			
 			AI.gamelogic();
 			finalpage();
+			cin.ignore();
 		}
 		
 		// showning the hackers info
