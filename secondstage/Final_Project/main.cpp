@@ -23,16 +23,17 @@ class ZeroToUniversity{
 		
 		style color;
 		// score of chloe classmates and her too(first amount of "score table")
-		int hesam_math = 18 ;
-		int hesam_AP = 19 ;
-		int hesam_physic = 16;
-		int baktash_math = 19;
-		int baktash_AP = 18;
-		int baktash_physic = 17 ;
-		int chloe_math = 18 ;
-		int chloe_AP = 2;
-		int chloe_physic = 14 ;
-		
+	public:
+		static int hesam_math  ;
+		static int hesam_AP  ;
+		static int hesam_physic ;
+		static int baktash_math ;
+		static int baktash_AP ;
+		static int baktash_physic  ;
+		static int chloe_math ;
+		static int chloe_AP ;
+		static int chloe_physic ;
+	private:	
 		// email inbox
 		string email[3];
 		int inbox;
@@ -871,11 +872,19 @@ class ZeroToUniversity{
 			}
 		}
 };
-
+int ZeroToUniversity::hesam_math = 18 ;
+int ZeroToUniversity::hesam_AP = 19 ;
+int ZeroToUniversity::hesam_physic = 16 ;
+int ZeroToUniversity::baktash_math = 19 ;
+int ZeroToUniversity::baktash_AP = 18 ;
+int ZeroToUniversity::baktash_physic = 17 ;
+int ZeroToUniversity::chloe_math = 18 ;
+int ZeroToUniversity::chloe_AP = 2 ;
+int ZeroToUniversity::chloe_physic = 14 ;
 int main(){
 	ZeroToUniversity test;
 	srand(12);
-	//run the game:
+	//run the game :
 	test.start();
 	
 	return 0;
