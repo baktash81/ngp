@@ -16,7 +16,6 @@ void assemble::gamelogic(){
 	cout << "YOU HAVE TO REACH TO SCORE 50 TO PASS." << endl ;
 	final.gamerunner();
 	firststagepass = final.pass;
-	
 	system("cls");
 	if(firststagepass){
 		cout << "Find the security holes :" << endl ;
