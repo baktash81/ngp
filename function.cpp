@@ -1,9 +1,6 @@
 #include<iostream>
 using namespace std;
 
-
-
-
 int tonum(string str){
 	// change the string format of number to integer format
 	char * arr;
