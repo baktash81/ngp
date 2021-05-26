@@ -36,9 +36,8 @@ class ZeroToUniversity{
 		static int chloe_physic ;
 	private:	
 		// email inbox
-		string email[3];
-		int inbox;
-		//Array <string,256> gmail;
+		Array <string,256> gmail;
+		
 		// to check which index of inbox should be filled
 		bool baktashemailsent;
 		bool hesamemailsent;
@@ -52,9 +51,6 @@ class ZeroToUniversity{
 	public:
 		ZeroToUniversity(){
 			// first value of email inbox
-			email[0] = "NONE" ;
-			email[1] = "NONE" ;
-			inbox = 0;
 			baktashemailsent = false;
 			hesamemailsent =false;
 			privatefilechecked = false;
@@ -79,6 +75,13 @@ class ZeroToUniversity{
 			}
 		}
 		
+		// 
+		void OutputEmail(){
+			cout << endl ;
+			for(int i = 0 ; i < gmail.get_point() ; i++){
+				cout << char(219) << char(219) << char(219) << char(219) << char(219) << char(219) << " " << gmail[i] << endl ;
+			}
+		}
 		// one Input place for all rooms
 		void Inputplace(){
 			cout << endl <<  "INPUT: " ;
@@ -209,28 +212,14 @@ class ZeroToUniversity{
 					//if baktash score is changed, sent email to him
 					if((input == "baktash.math" || input == "baktash.physics" || input == "baktash.AP" || input == "baktash.ap") && !baktashemailsent ){
 						baktashemailsent = true;
-						inbox++;
-						int index ;
-						if(hesamemailsent){
-							index = 1 ;
-						}else{
-							index = 0 ;
-						}
 						// email content (baktash)
-						email[index] = "baktash : I feel my scores had changed but I dont know why";
-						
+						string sent = "baktash : I feel my scores had changed but I dont know why";
+						gmail.append(sent);
 					//if hesam score is changed, sent email to him
 					}else if((input == "hesam.math" || input == "hesam.physics" || input == "hesam.AP" || input == "hesam.ap") && !hesamemailsent){
 						hesamemailsent = true;
-						inbox++;
-						int index ;
-						if(baktashemailsent){
-							index = 1 ;
-						}else{
-							index = 0 ;
-						}
-						// email content (hesam)
-						email[index] = "hesam : Whats wrong with LMS? my scores had changed!";
+						string sent = "hesam : Whats wrong with LMS? my scores had changed!";
+						gmail.append(sent);
 					}
 					
 					//finally changing the score !
@@ -657,9 +646,9 @@ class ZeroToUniversity{
 					if(!goverment.hesampass){
 						//befor hacking "158.58.187.219"
 						string alpha[] = {"university LMS" , "email" , "158.58.187.219" , "back"};
-						if(inbox == 1){
+						if(gmail.get_point() == 1){
 							alpha[1] = "email (1)";
-						}else if(inbox == 2){
+						}else if(gmail.get_point() == 2){
 							alpha[1] = "email (2)";
 						}
 						OutputChoices(alpha , 4);
@@ -681,9 +670,9 @@ class ZeroToUniversity{
 					}else{
 						//after hacking "158.58.187.219"
 						string alpha[] = {"university LMS" , "email" , "158.58.187.219 (hecked early)" , "back"};
-						if(inbox == 1){
+						if(gmail.get_point() == 1){
 							alpha[1] = "email (1)";
-						}else if(inbox == 2){
+						}else if(gmail.get_point() == 2){
 							alpha[1] = "email (2)";
 						}
 						OutputChoices(alpha , 4);
@@ -705,9 +694,9 @@ class ZeroToUniversity{
 				}else{
 					// private file check nashude :
 					string alpha[] = {"university LMS" , "email" , "back"};
-					if(inbox == 1){
+					if(gmail.get_point() == 1){
 						alpha[1] = "email (1)";
-					}else if(inbox == 2){
+					}else if(gmail.get_point() == 2){
 						alpha[1] = "email (2)";
 					}
 					OutputChoices(alpha , 3);
@@ -736,10 +725,11 @@ class ZeroToUniversity{
 				
 				// email output
 				cout << "your inbox :" << endl ;
-				if (inbox == 0){
+				if (gmail.get_point() == 0){
 					cout << endl <<"inbox is empty!" << endl ;
 				}else{
-					OutputText(email , inbox);
+					//OutputText(email , inbox);
+					OutputEmail();
 				}
 				string a[] = {"back"};
 				OutputChoices(a , 1);
