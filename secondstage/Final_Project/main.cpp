@@ -7,6 +7,7 @@
 #include "assemble.h"
 #include "style.h"
 #include "array.h"
+#include "AIsurprise.cpp"
 using namespace std;
 class ZeroToUniversity{
 	private:
@@ -21,6 +22,9 @@ class ZeroToUniversity{
 		
 		// AI turn off
 		assemble AI;
+		
+		// desktop game
+		Trade suprise;
 		
 		style color;
 		// score of chloe classmates and her too(first amount of "score table")
@@ -802,7 +806,10 @@ class ZeroToUniversity{
 				cout << "number : " ;
 			}
 		}
-		
+		void AIsurprise(){
+			system("cls");
+			suprise.rungame();
+		}
 		// desktop game directory
 		void Indesktopgame(){
 			while(true){
@@ -816,15 +823,17 @@ class ZeroToUniversity{
 				cout << "games folder is open" << endl << endl ;
 				
 				// output text and check user input(inke user chikar mikhd bokone)
-				string a[] = {"guess the number!" , "back"};
-				OutputChoices(a , 2);
+				string a[] = {"Guess the number!" ,"AI surprise", "back"};
+				OutputChoices(a , 3);
 				string g;
 				Inputplace();
 				getline(cin , g);
 				if(g == "2"){
-					return;
+					AIsurprise();
 				}else if(g == "1"){
 					guessthenumber();
+				}else if(g == "3"){
+					return;
 				}
 			}
 		}
