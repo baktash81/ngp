@@ -6,6 +6,7 @@
 #include <fstream>
 #include "assemble.h"
 #include "style.h"
+#include "array.h"
 using namespace std;
 class ZeroToUniversity{
 	private:
@@ -37,7 +38,7 @@ class ZeroToUniversity{
 		// email inbox
 		string email[3];
 		int inbox;
-		
+		//Array <string,256> gmail;
 		// to check which index of inbox should be filled
 		bool baktashemailsent;
 		bool hesamemailsent;
