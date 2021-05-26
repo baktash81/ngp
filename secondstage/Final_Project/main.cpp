@@ -79,7 +79,7 @@ class ZeroToUniversity{
 			}
 		}
 		
-		// 
+		// output email
 		void OutputEmail(){
 			cout << endl ;
 			for(int i = 0 ; i < gmail.get_point() ; i++){
