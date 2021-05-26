@@ -79,6 +79,29 @@ class ZeroToUniversity{
 			}
 		}
 		
+		// change the string format of number to integer format
+		int tonum(string str){
+			char * arr;
+			int x=0;
+			arr = new char [str.length()];
+			for(int i=0;i<str.length();i++)
+				arr[i] = str[i];
+			for(int i=0;i<str.length();i++)
+				x = x*10 + (arr[i]-'0');
+			delete [] arr;
+			return x;
+		}
+		
+		// check the string is number or not
+		bool isDigit(string s){
+			
+			for(int i=0;i<s.size();i++){
+				if(isdigit(s[i])==false||s[i]=='.')
+					return false;
+			}
+			return true;
+		}
+		
 		// output email
 		void OutputEmail(){
 			cout << endl ;
@@ -788,19 +811,27 @@ class ZeroToUniversity{
 			cout << "guess a number (1 - 100): ";
 			
 			// addad tasdofi ke bayad hads zade beshe
-			float number = rand()%100 ;
+			int number = rand()%100 ;
 			while(true){
-				float input;
+				string input;
+				int guessed;
 				cin >> input;
-				if(input == number){
+				if(input == "-1"){
+					return;
+				}
+				if(! isDigit(input)){
+					cout << "please input an integer !" << endl;
+					sleep(1);
+					continue;
+				}
+				guessed = tonum(input);
+				if(guessed == number){
 					cout << "Hoooray thats true!" << endl ;
 					sleep(2);
 					return;
-				}else if(input == -1){
-					return;
-				}else if(input > number){
+				}else if(guessed > number){
 					cout << "guess the smaller one!" << endl ;
-				}else if(input < number){
+				}else if(guessed < number){
 					cout << "guess the bigger one!" << endl ;
 				}
 				cout << "number : " ;
