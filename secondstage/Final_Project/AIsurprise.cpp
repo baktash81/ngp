@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-
+#include "style.h"
 using namespace std;
  
 class Trade{
@@ -11,14 +11,19 @@ class Trade{
 		float amount_stock=0;
 		int cash = 10000;
 		char accept;
+		style color;
 	public:
 		Trade(){
-			cout << " AI: I decided to hack the acount bank of one of the IUST Professors "<<'\n'<<endl;
-			cout<<"And i do it  :] "<<endl;	
-			cout << "If you accept this amount, press the A key."<<endl;
+			
 		}
 		
 		void rungame(){
+			color + 12 ;
+			cout << " PC AI:";
+			color + 7;
+			cout << " I decided to hack the acount bank of one of the IUST Professors " <<'\n'<<endl;
+			cout<<"And i do it  :] "<<endl;	
+			cout << "If you accept this amount, press the A key."<<endl;
 			cin >> accept;
 			if(accept == 'A'){
 				
@@ -218,7 +223,7 @@ class Trade{
 					
 						
 					if(mode == 4){
-						exit(0);
+						
 					}
 				
 			}
