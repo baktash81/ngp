@@ -171,7 +171,7 @@ class Trade{
 							cout << "Cash Asset:"<<cash<<endl;	
 							cout<<"How many of this stock do you want?"<<endl;
 							
-							int amount_buy;
+							float amount_buy;
 							cin >> amount_buy;
 							float Payable = amount_buy*price;
 							
@@ -195,7 +195,7 @@ class Trade{
 							
 							cout << "How much of your stock do you want to sell?"<<endl;
 							
-							int amount_sell;
+							float amount_sell;
 							cin >>amount_sell;
 							
 							if(amount_sell >= amount_stock){
