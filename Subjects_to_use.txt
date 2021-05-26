@@ -2,11 +2,11 @@
 
 2. operator overloading (done)
 
-3. templates
+3. templates (done)
 
 4. friend class/functions (done)
 
-5. proxy classes
+5. proxy classes (done)
 
 6. getter / setter member functions (done)
 
