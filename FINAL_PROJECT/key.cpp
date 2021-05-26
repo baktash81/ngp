@@ -8,7 +8,7 @@ using namespace std;
 #include "key.h"
 void keyGenerator::gamerunner(){
 			// assemblening the other functions and runnig the game
-			
+			cout << "go from 0 to 1 by keys 'a' , 's' , 'd' and 'w' with facing to blocks." << endl << endl ;
 			while(true){
 				initialize();
 				table_drawer();
