@@ -1157,7 +1157,7 @@ class ZeroToUniversity{
 		}
 		// one Input place for all rooms
 		void Inputplace(){
-			cout << endl <<  "INPUT: " ;
+			cout << endl <<  "INPUT:"<<endl ;
 		}
 		
 		// LMS database:
@@ -1979,6 +1979,8 @@ int main(){
 	ZeroToUniversity test;
 	srand(12);
 	//run the game :
+	int a;
+	cin>>a;
 	test.start();
 	
 	return 0;
