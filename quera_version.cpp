@@ -1275,6 +1275,7 @@ class ZeroToUniversity{
 				if(( input == "baktash.math" || input == "baktash.physics" ||input == "baktash.AP" || input == "baktash.ap" ||input == "hesam.AP" || input == "hesam.ap" ||input == "hesam.physics" ||input == "hesam.math" || input == "chloe.AP" || input == "chloe.ap" || input == "chloe.physics" || input == "chloe.math" )){
 					cout << "Change number to : ";
 					cin >> changed;	
+					cin.ignore();
 				}else if (input == "1"){
 					// back
 				}else{
