@@ -1,0 +1,111 @@
+ PC AI : hello chloe, check your task managment app.
+
+
+██████ 1 :Internet
+
+██████ 2 :task managment app
+
+██████ 3 :games
+
+██████ 4 :shutdown
+
+INPUT: 
+ PC AI : Internet is open ! choose the site you want to go:
+
+
+██████ 1 :university LMS
+
+██████ 2 :email
+
+██████ 3 :back
+
+INPUT: 
+ PC AI : hello chloe, check your task managment app.
+
+
+██████ 1 :Internet
+
+██████ 2 :task managment app
+
+██████ 3 :games
+
+██████ 4 :shutdown
+
+INPUT: 
+ PC AI : let's do from the first !
+
+here is your tasks:
+
+██████ Check your scores in LMS
+██████ Study for physics
+██████ Study for math
+██████ Depression test
+
+██████ 1 :back
+
+INPUT: 
+ PC AI : hello chloe, check your task managment app.
+
+
+██████ 1 :Internet
+
+██████ 2 :task managment app
+
+██████ 3 :games
+
+██████ 4 :shutdown
+
+INPUT: 
+ PC AI : games folder is open
+
+
+██████ 1 :Guess the number!
+
+██████ 2 :AI surprise
+
+██████ 3 :back
+
+INPUT: 
+ PC AI : enter -1 to exit
+
+guess a number (1 - 100): -10
+please input an integer !
+
+guess the bigger one!
+number : 
+guess the smaller one!
+number : 
+Hoooray thats true!
+ PC AI : games folder is open
+
+
+██████ 1 :Guess the number!
+
+██████ 2 :AI surprise
+
+██████ 3 :back
+
+INPUT:  
+ PC AI : games folder is open
+
+
+██████ 1 :Guess the number!
+
+██████ 2 :AI surprise
+
+██████ 3 :back
+
+INPUT: 
+ PC AI : hello chloe, check your task managment app.
+
+
+██████ 1 :Internet
+
+██████ 2 :task managment app
+
+██████ 3 :games
+
+██████ 4 :shutdown
+
+INPUT: 
+bye !
