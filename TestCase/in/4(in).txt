@@ -1,4 +1,0 @@
-1(internet)
-1(lms)
-1(See scores)
-1(back)
