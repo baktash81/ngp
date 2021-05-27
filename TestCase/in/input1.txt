@@ -1,0 +1,13 @@
+// check destop
+1( internet )
+3 (back)
+2 (taskmanager)
+1 ( back)
+3 (games)
+1 ( guess the number )
+-10 ( error)
+70 ( guess bigger)
+80 ( guess lower )
+77 ( true ! )
+3 ( back )
+4 ( shutdown ) 
