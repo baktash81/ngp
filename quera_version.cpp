@@ -879,6 +879,7 @@ void GameThree::gamerunner(){
 		this->generate_Key();
 		this->print_1();
 		this->input();
+		cin.ignore();
 		return;
 }
 
