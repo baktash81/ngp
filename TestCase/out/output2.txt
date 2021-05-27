@@ -208,7 +208,6 @@ Select to edit (example : hesam.math ) :
 
 ██████ 1 :back
 
-INPUT: Entry didn't found!
  Name   : math , AP , physics
  baktash : 19 , 18 , 17
  hesam  : 18 , 11 , 16
