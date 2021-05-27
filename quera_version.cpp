@@ -425,7 +425,7 @@ void keyGenerator::gamerunner(){
 				}
 				cout << "SCORE IS : " << emtiaz << endl ;
 				cout << "YOU CAN TYR " << (3  - loose) << " MORE TIMES !" << endl ;
-				sleep(1);
+				//sleep(1);
 				if(emtiaz == 20){
 					len = 10;
 				}else if (emtiaz == endemtiaz){
@@ -860,7 +860,7 @@ string Member::get_str(int index) {
 		else{
 			pass = true;
 			cout << "LOCK BREAKED"<<endl;
-			sleep(2);
+			//sleep(2);
 		}	
 		//cout << "warning:"<<warning<<endl;	
 		Point = Point - 20;
@@ -1012,7 +1012,7 @@ assemble::assemble(){
 void assemble::gamelogic(){
 	//first game :
 	cout << "(Now you have to turn AI off with these security steps!)" << endl << endl ;
-	sleep(2);
+	//sleep(2);
 	cout << "This is the AI Structure use its weak points an poisen it by Injecting a code :" << endl ;
 	cout << "YOU HAVE TO REACH TO SCORE 50 TO PASS." << endl ;
 	final.gamerunner();
@@ -1287,13 +1287,13 @@ class ZeroToUniversity{
 				if(!(isDigit(changed))){
 					cout << "input incorect ! (just integet)" << endl ;
 					input = "p" ;
-					sleep(2);
+					//sleep(2);
 				}else {
 					int edit = tonum(changed);
 					if(edit > 20){
 						cout << "number should be lower than 20 :/" << endl;
 						input = "p";
-						sleep(2);
+						//sleep(2);
 					}
 					//if baktash score is changed, sent email to him
 					if((input == "baktash.math" || input == "baktash.physics" || input == "baktash.AP" || input == "baktash.ap") && !baktashemailsent ){
@@ -1592,17 +1592,17 @@ class ZeroToUniversity{
 			cout << " PC AI : " ; 
 			color + 7 ;
 			cout << "I'm sorry, I had to use that private data to hack VAJA." << endl << endl ;
-			sleep(2);
+			//sleep(2);
 			color + ai_color ;
 			cout << " PC AI : " ; 
 			color + 7 ;
 			cout << "This how my programmers coded me!" << endl << endl ;
-			sleep(2);
+			//sleep(2);
 			color + ai_color ;
 			cout << " PC AI : " ; 
 			color + 7 ;
 			cout << "Goodbye..." << endl << endl ;
-			sleep(2);
+			//sleep(2);
 			
 			
 			// clear past inputs and outputs
@@ -1628,7 +1628,7 @@ class ZeroToUniversity{
 				color + 7 ;
 				cout << "let me get it for you" << endl << endl ;
 				cout << "loading..." << endl ;
-				sleep(2);
+				//sleep(2);
 				color + ai_color ;
 				cout << " PC AI : " ; 
 				color + 7 ;
@@ -1882,13 +1882,13 @@ class ZeroToUniversity{
 				}
 				if(! isDigit(input)){
 					cout << "please input an integer !" << endl;
-					sleep(1);
+					//sleep(1);
 					continue;
 				}
 				guessed = tonum(input);
 				if(guessed == number){
 					cout << "Hoooray thats true!" << endl ;
-					sleep(2);
+					//sleep(2);
 					return;
 				}else if(guessed > number){
 					cout << "guess the smaller one!" << endl ;
