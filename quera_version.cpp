@@ -5,7 +5,7 @@
 #include <stdio.h>
 #include <time.h>
 #include <unistd.h> //sleep
-#include <windows.h>
+//#include <windows.h>
 #include <string>
 #include <iomanip>
 using namespace std;
@@ -53,7 +53,7 @@ class keyGenerator{
 		string key;
 		int loose;
 		int endemtiaz;
-		HANDLE  hConsole;
+		//HANDLE  hConsole;
 	public:
 		bool pass ;
 		keyGenerator(){
@@ -63,7 +63,7 @@ class keyGenerator{
 			len = 9 ;
 			pass = false;
 			emtiaz  = 0 ;
-			hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+			//hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 			number_colors = 10;
 			block_colors = 6; 
 			loose = 0;
@@ -110,7 +110,7 @@ class GameThree{
 		int warning;
 		int Point = 500;
 		string Key_Suggest;
-		HANDLE  hConsole;
+		//HANDLE  hConsole;
 	public:
 		bool pass;
 		GameThree();
@@ -170,12 +170,13 @@ private:
 };
 
 
-class style{
+/*class style{
 	public:
 	HANDLE  hConsole;
 	style();
 	void operator+ (int input);
 };
+*/
 
 
 
@@ -185,16 +186,16 @@ class Trade{
 		float amount_stock=0;
 		int cash = 10000;
 		char accept;
-		style color;
+		//style color;
 	public:
 		Trade(){
 			
 		}
 		
 		void rungame(){
-			color + 12 ;
+			//color + 12 ;
 			cout << " PC AI:";
-			color + 7;
+			//color + 7;
 			cout << " I decided to hack the acount bank of one of the IUST Professors " <<'\n'<<endl;
 			cout<<"And i do it  :] "<<endl;	
 			cout << "If you accept this amount, press the A key."<<endl;
@@ -594,24 +595,24 @@ void keyGenerator::table_drawer(){
 				//entries :
 				for(int i =0 ; i < len ; i++){
 					if(i == first_i && j ==first_j){
-						SetConsoleTextAttribute(hConsole, number_colors);
+						//SetConsoleTextAttribute(hConsole, number_colors);
 						cout << " 0" ;
-						SetConsoleTextAttribute(hConsole, 15);
+						//SetConsoleTextAttribute(hConsole, 15);
 						cout << "|";
 					}else if (i == second_i && j ==second_j) {
-						SetConsoleTextAttribute(hConsole, number_colors);
+						//SetConsoleTextAttribute(hConsole, number_colors);
 						cout << " 1" ;
-						SetConsoleTextAttribute(hConsole, 15);
+						//SetConsoleTextAttribute(hConsole, 15);
 						cout << "|";
 					}else if((i == blocked_i || j == blocked_j)){
 						if(i == no_blocked_i || j ==no_blocked_j ){
 							cout << "  |";
 						}else{
 							//color the block: 10 -> green
-							SetConsoleTextAttribute(hConsole, block_colors);
+							//SetConsoleTextAttribute(hConsole, block_colors);
 							cout << char(178) << char(178) ;
 							//set back to defualt: 15 -> white
-							SetConsoleTextAttribute(hConsole, 15);
+							//SetConsoleTextAttribute(hConsole, 15);
 							cout << "|";
 						}
 					}else{
@@ -671,15 +672,15 @@ Map::Map(int level):m(level) {this->level = level;}
 void Map::print() const {
     const char separator= ' ';
     const int numWidth= 3;
-    HANDLE  hConsole;
-    hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+    //HANDLE  hConsole;
+    //hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
     for(int y=0;y<21;y++) {
         if(y==0) {
             cout<<"   ";
             for (int i = 0; i < 4; i++)
                 cout << "  ";
             for (int i = 1; i < 21; i++) {
-                SetConsoleTextAttribute(hConsole, 10);
+                //SetConsoleTextAttribute(hConsole, 10);
                 cout << left << setw(numWidth) << setfill(separator) << i;
             }
             cout << endl;
@@ -687,13 +688,13 @@ void Map::print() const {
         else {
             for (int j = 0; j < 4; j++)
                 cout << "  ";
-            SetConsoleTextAttribute(hConsole, 4);
+            //SetConsoleTextAttribute(hConsole, 4);
             cout << width[y-1] << "  ";
-            SetConsoleTextAttribute(hConsole, 9);
+            //SetConsoleTextAttribute(hConsole, 9);
             for (int i = 0; i < 20; i++) {
                     cout << left << setw(numWidth) << setfill(separator) << m.get_character(i, y-1);
             }
-            SetConsoleTextAttribute(hConsole, 15);
+            //SetConsoleTextAttribute(hConsole, 15);
             cout<<endl;
         }
     }
@@ -771,7 +772,7 @@ string Member::get_str(int index) {
 }
 
 	GameThree::GameThree(){
-		hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+		//hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 		pass = false;
 		warning=0;
 		
@@ -813,42 +814,42 @@ string Member::get_str(int index) {
 		for(int i=0; i<3 ; i++){
 			if(keyC[i] != MainKey[i]){
 				if(i==0){
-					SetConsoleTextAttribute(hConsole, 12);
+					//SetConsoleTextAttribute(hConsole, 12);
 					cout << char(219) << " " ;
-					SetConsoleTextAttribute(hConsole, 7);
+					//SetConsoleTextAttribute(hConsole, 7);
 				}
 				if(i==1){
 					//cout << "The second character is wrong."<<endl;
-					SetConsoleTextAttribute(hConsole, 12);
+					//SetConsoleTextAttribute(hConsole, 12);
 					cout << char(219) << " " ;
-					SetConsoleTextAttribute(hConsole, 7);
+					//SetConsoleTextAttribute(hConsole, 7);
 				}
 				if(i==2){
 					//cout << "The third character is wrong."<<endl;
-					SetConsoleTextAttribute(hConsole, 12);
+					//SetConsoleTextAttribute(hConsole, 12);
 					cout << char(219) << " " ;
-					SetConsoleTextAttribute(hConsole, 7);
+					//SetConsoleTextAttribute(hConsole, 7);
 				}
 				warning++;
 			}		
 			if(keyC[i] == MainKey[i]){
 				if(i==0){
 					//cout << "The first character is True."<<endl;
-					SetConsoleTextAttribute(hConsole, 10);
+					//SetConsoleTextAttribute(hConsole, 10);
 					cout << char(219) << " " ;
-					SetConsoleTextAttribute(hConsole, 7);
+					//SetConsoleTextAttribute(hConsole, 7);
 				}
 				if(i==1){
 					//cout << "The second character is True."<<endl;
-					SetConsoleTextAttribute(hConsole, 10);
+					//SetConsoleTextAttribute(hConsole, 10);
 					cout << char(219) << " " ;
-					SetConsoleTextAttribute(hConsole, 7);
+					//SetConsoleTextAttribute(hConsole, 7);
 				}
 				if(i==2){
 					//cout << "The third character is True."<<endl;
-					SetConsoleTextAttribute(hConsole, 10);
+					//SetConsoleTextAttribute(hConsole, 10);
 					cout << char(219) << " " ;
-					SetConsoleTextAttribute(hConsole, 7);
+					//SetConsoleTextAttribute(hConsole, 7);
 				}					
 			}
 									
@@ -973,12 +974,12 @@ void Security_Holes::rungame() {
 }
 
 
-style::style(){
+/*style::style(){
 	hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 }
 void style::operator+ (int input){
 	SetConsoleTextAttribute(hConsole, input);
-}
+}*/
 
 
 class assemble{
@@ -1071,7 +1072,7 @@ class ZeroToUniversity{
 		// desktop game
 		Trade suprise;
 		
-		style color;
+		//style color;
 		// score of chloe classmates and her too(first amount of "score table")
 	public:
 		static int hesam_math  ;
@@ -1166,11 +1167,11 @@ class ZeroToUniversity{
 				//system("cls");
 				
 				// changing the output color to red
-				color+ai_color ;
+				//color+ai_color ;
 				cout << "PC AI : " ; 
 				
 				// change color to defualt color(7)
-				color + 7 ;
+				//color + 7 ;
 				// PC AI says:
 				cout << "So we are in iust datacenter. Hey is that private folder ?" << endl ;
 				
@@ -1204,9 +1205,9 @@ class ZeroToUniversity{
 				//system("cls");
 				
 				// AI output
-				color + ai_color ;
+				//color + ai_color ;
 				cout << " PC AI : " ; 
-				color + 7 ;
+				//color + 7 ;
 				cout << "As you see there is some info that you can access the ITO with it. \n The web address added to your browser.\n Lets see what's happening there." << endl ;
 				
 				// private file reading from "file/privatefile.txt"
@@ -1352,9 +1353,9 @@ class ZeroToUniversity{
 				//system("cls");
 				
 				// AI output
-				color + ai_color ;
+				//color + ai_color ;
 				cout << " PC AI : " ; 
-				color + 7 ;
+				//color + 7 ;
 				cout << "Hey chloe ,use 'edit table' to change your scores." << endl << endl ;
 				
 				// table
@@ -1384,9 +1385,9 @@ class ZeroToUniversity{
 				//system("cls");
 				
 				// AI output:
-				color + ai_color ;
+				//color + ai_color ;
 				cout << " PC AI : " ; 
-				color + 7 ;
+				//color + 7 ;
 				
 				// age nomre AP kam tar az 10 bood AI yechi dg bege :)
 				if(chloe_AP > 9){
@@ -1401,31 +1402,31 @@ class ZeroToUniversity{
 				
 				// changing the color if the scores if it is less than 10 :)
 				if(chloe_math > 9){
-					color + 10 ;
+					//color + 10 ;
 					cout << char(219) << char(219) << char(219) << char(219) << char(219) << char(219) << " " << "math" <<" : " << chloe_math << endl ;
 				}else{
-					color + 12 ;
+					//color + 12 ;
 					cout << char(219) << char(219) << char(219) << char(219) << char(219) << char(219) << " " << "math" <<" : " << chloe_math << endl ;
 				}
 				
 				if(chloe_AP > 9){
-					color + 10 ;
+					//color + 10 ;
 					cout << char(219) << char(219) << char(219) << char(219) << char(219) << char(219) << " " << "AP" <<" : " << chloe_AP << endl ;
 				}else{
-					color + 12 ;
+					//color + 12 ;
 					cout << char(219) << char(219) << char(219) << char(219) << char(219) << char(219) << " " << "AP" <<" : " << chloe_AP << endl ;
 				}
 				
 				if(chloe_physic > 9){
-					color + 10 ;
+					//color + 10 ;
 					cout << char(219) << char(219) << char(219) << char(219) << char(219) << char(219) << " " << "physics" <<" : " << chloe_physic << endl ;
 				}else{
-					color + 12 ;
+					//color + 12 ;
 					cout << char(219) << char(219) << char(219) << char(219) << char(219) << char(219) << " " << "physics" <<" : " << chloe_physic << endl ;
 				}
 				
 				//defualt output color
-				color + 7 ;
+				//color + 7 ;
 				
 				// output text and check user input(inke user chikar mikhd bokone)
 				string alpha[] = {"back"};
@@ -1447,9 +1448,9 @@ class ZeroToUniversity{
 				//system("cls");
 				
 				// AI output:
-				color + ai_color ;
+				//color + ai_color ;
 				cout << " PC AI : " ; 
-				color + 7 ;
+				//color + 7 ;
 				cout << "We are in LMS." << endl << endl ;	
 				
 							
@@ -1529,9 +1530,9 @@ class ZeroToUniversity{
 				//system("cls");
 				
 				// AI output:
-				color + ai_color ;
+				//color + ai_color ;
 				cout << " PC AI : " ; 
-				color + 7 ;
+				//color + 7 ;
 				cout << "!!! ACCESS DENIED !!!" << endl << endl ;				
 				
 				// output text and check user input(inke user chikar mikhd bokone)
@@ -1551,9 +1552,9 @@ class ZeroToUniversity{
 				//system("cls");
 				
 				// AI output:
-				color + ai_color ;
+				//color + ai_color ;
 				cout << " PC AI : " ; 
-				color + 7 ;
+				//color + 7 ;
 				cout << "!!! ACCESS DENIED !!!" << endl << endl ;
 				
 				// output text and check user input(inke user chikar mikhd bokone)
@@ -1570,7 +1571,7 @@ class ZeroToUniversity{
 		//safhe akhar ke neshun bedim bord ya na !
 		void finalpage(){
 			if(AI.firststagepass){
-				color + 112;
+				//color + 112;
 				cout << "Well Done !" << endl ;
 				cout <<" ---------------------------------------------------" << endl ;
 				cout <<"|   -          :) AI is down. you won :)           -  |" << endl ;
@@ -1589,19 +1590,19 @@ class ZeroToUniversity{
 			//system("cls");
 			
 			// AI output:
-			color + ai_color ;
+			//color + ai_color ;
 			cout << " PC AI : " ; 
-			color + 7 ;
+			//color + 7 ;
 			cout << "I'm sorry, I had to use that private data to hack VAJA." << endl << endl ;
 			//sleep(2);
-			color + ai_color ;
+			//color + ai_color ;
 			cout << " PC AI : " ; 
-			color + 7 ;
+			//color + 7 ;
 			cout << "This how my programmers coded me!" << endl << endl ;
 			//sleep(2);
-			color + ai_color ;
+			//color + ai_color ;
 			cout << " PC AI : " ; 
-			color + 7 ;
+			//color + 7 ;
 			cout << "Goodbye..." << endl << endl ;
 			//sleep(2);
 			
@@ -1624,21 +1625,21 @@ class ZeroToUniversity{
 				//system("cls");
 				
 				// AI output:
-				color + ai_color ;
+				//color + ai_color ;
 				cout << " PC AI : " ; 
-				color + 7 ;
+				//color + 7 ;
 				cout << "let me get it for you" << endl << endl ;
 				cout << "loading..." << endl ;
 				//sleep(2);
-				color + ai_color ;
+				///color + ai_color ;
 				cout << " PC AI : " ; 
-				color + 7 ;
+				//color + 7 ;
 				cout << "Here is information :" << endl << endl ;
 				cout << "Name : chloe\nlastname : clem\nlocation : 0km farther\nuser IP : 85.133.195.18\nyour IP : 85.133.195.18" << endl ;
 				
-				color + ai_color ;
+				//color + ai_color ;
 				cout << " PC AI : " ; 
-				color + 7 ;
+				//color + 7 ;
 				cout << "How is it possible ? you didn't access the site ..." << endl << endl ;
 				
 				// output text and check user input(inke user chikar mikhd bokone)
@@ -1663,9 +1664,9 @@ class ZeroToUniversity{
 				cout << endl <<" ---------------------------------------------------" << endl ;
 				cout <<"|      -    YOU CAN'T ACCESS THIS WEBSITE     -     |" << endl ;
 				cout <<" ---------------------------------------------------" << endl << endl ;
-				color + ai_color ;
+				//color + ai_color ;
 				cout << " PC AI : " ; 
-				color + 7 ;
+				//color + 7 ;
 				cout << "It seem's someone is hacking this webiste before you !" << endl << endl ;
 				cout <<" ---------------------------------------------------" << endl ;
 				cout <<"|   -   site is being hacked by some one else    -  |" << endl ;
@@ -1692,9 +1693,9 @@ class ZeroToUniversity{
 				//system("cls");
 				
 				// AI output:
-				color + ai_color ;
+				//color + ai_color ;
 				cout << " PC AI : " ; 
-				color + 7 ;
+				//color + 7 ;
 				cout << "We have many access right now." << endl << endl ;
 				cout << "You can access these places via our platform :" << endl;
 				
@@ -1723,9 +1724,9 @@ class ZeroToUniversity{
 				//system("cls");
 				
 				// AI output:
-				color + ai_color ;
+				//color + ai_color ;
 				cout << " PC AI : " ; 
-				color + 7 ;
+				//color + 7 ;
 				cout << "Internet is open ! choose the site you want to go: " << endl << endl ;
 				
 				//baressi konim ke aya private file check shude ke basesh site "158.58.187.219" in ro baz konim ya na
@@ -1839,9 +1840,9 @@ class ZeroToUniversity{
 				//system("cls");
 				
 				// AI output:
-				color + ai_color ;
+				//color + ai_color ;
 				cout << " PC AI : " ; 
-				color + 7 ;
+				//color + 7 ;
 				cout << "let's do from the first !" << endl << endl ;
 				cout << "here is your tasks:" << endl ;
 				
@@ -1866,9 +1867,9 @@ class ZeroToUniversity{
 			//system("cls");
 			
 			// AI output:
-			color + ai_color ;
+			//color + ai_color ;
 			cout << " PC AI : " ; 
-			color + 7 ;
+			//color + 7 ;
 			cout << "enter -1 to exit" << endl << endl ;
 			cout << "guess a number (1 - 100): ";
 			
@@ -1910,9 +1911,9 @@ class ZeroToUniversity{
 				//system("cls");
 				
 				// AI output
-				color + ai_color ;
+				//color + ai_color ;
 				cout << " PC AI : " ; 
-				color + 7 ;
+				//color + 7 ;
 				cout << "games folder is open" << endl << endl ;
 				
 				// output text and check user input(inke user chikar mikhd bokone)
@@ -1939,9 +1940,9 @@ class ZeroToUniversity{
 				//system("cls");
 				
 				// AI output
-				color + ai_color ;
+				//color + ai_color ;
 				cout << " PC AI : " ; 
-				color + 7 ;
+				//color + 7 ;
 				
 				
 				cout << "hello chloe, check your task managment app. " << endl << endl ;
