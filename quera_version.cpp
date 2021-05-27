@@ -1979,8 +1979,9 @@ int main(){
 	ZeroToUniversity test;
 	srand(12);
 	//run the game :
-	int a;
-	cin>>a;
+	string a;
+	getline(cin,a);
+	//cin.ignore();
 	test.start();
 	
 	return 0;
