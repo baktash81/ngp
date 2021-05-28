@@ -194,7 +194,7 @@ class Trade{
 		
 		void rungame(){
 			//color + 12 ;
-			cout << " PC AI:";
+			cout << "PC AI:";
 			//color + 7;
 			cout << " I decided to hack the acount bank of one of the IUST Professors " <<'\n'<<endl;
 			cout<<"And i do it  :] "<<endl;	
@@ -796,7 +796,7 @@ string Member::get_str(int index) {
 		//cout<<"====================="<<'\n'<<'\n'<<endl;
 		//cout << "(guess the password !)" << endl ;
 		cout << "Please Enter Password:"<<endl;
-		cout << char(219)<<' '<<char(219)<<' '<<char(219)<<endl;			
+		//cout << char(219)<<' '<<char(219)<<' '<<char(219)<<endl;			
 
 	}
 	string GameThree::generate_Key(){
@@ -814,41 +814,42 @@ string Member::get_str(int index) {
 		for(int i=0; i<3 ; i++){
 			if(keyC[i] != MainKey[i]){
 				if(i==0){
+					cout << "The first character is wrong."<<endl;
 					//SetConsoleTextAttribute(hConsole, 12);
-					cout << char(219) << " " ;
+					//cout << char(219) << " " ;
 					//SetConsoleTextAttribute(hConsole, 7);
 				}
 				if(i==1){
-					//cout << "The second character is wrong."<<endl;
+					cout << "The second character is wrong."<<endl;
 					//SetConsoleTextAttribute(hConsole, 12);
-					cout << char(219) << " " ;
+					//cout << char(219) << " " ;
 					//SetConsoleTextAttribute(hConsole, 7);
 				}
 				if(i==2){
-					//cout << "The third character is wrong."<<endl;
+					cout << "The third character is wrong."<<endl;
 					//SetConsoleTextAttribute(hConsole, 12);
-					cout << char(219) << " " ;
+					//cout << char(219) << " " ;
 					//SetConsoleTextAttribute(hConsole, 7);
 				}
 				warning++;
 			}		
 			if(keyC[i] == MainKey[i]){
 				if(i==0){
-					//cout << "The first character is True."<<endl;
+					cout << "The first character is True."<<endl;
 					//SetConsoleTextAttribute(hConsole, 10);
-					cout << char(219) << " " ;
+					//cout << char(219) << " " ;
 					//SetConsoleTextAttribute(hConsole, 7);
 				}
 				if(i==1){
-					//cout << "The second character is True."<<endl;
+					cout << "The second character is True."<<endl;
 					//SetConsoleTextAttribute(hConsole, 10);
-					cout << char(219) << " " ;
+					//cout << char(219) << " " ;
 					//SetConsoleTextAttribute(hConsole, 7);
 				}
 				if(i==2){
-					//cout << "The third character is True."<<endl;
+					cout << "The third character is True."<<endl;
 					//SetConsoleTextAttribute(hConsole, 10);
-					cout << char(219) << " " ;
+					//cout << char(219) << " " ;
 					//SetConsoleTextAttribute(hConsole, 7);
 				}					
 			}
@@ -1113,7 +1114,7 @@ class ZeroToUniversity{
 		void OutputChoices(string choices[] , int len){
 
 			for(int i = 0 ; i < len ; i++){
-				cout << endl <<char(219) << char(219) << char(219) << char(219) << char(219) << char(219) << " " << i+1 <<" :" << choices[i] << endl ;
+				cout << endl << i+1 <<" :" << choices[i] << endl ;
 			}
 		}
 		
@@ -1121,7 +1122,7 @@ class ZeroToUniversity{
 		void OutputText(string choices[] , int len){
 			cout << endl ;
 			for(int i = 0 ; i < len ; i++){
-				cout << char(219) << char(219) << char(219) << char(219) << char(219) << char(219) << " " << choices[i] << endl ;
+				cout << " " << choices[i] << endl ;
 			}
 		}
 		
@@ -1152,7 +1153,7 @@ class ZeroToUniversity{
 		void OutputEmail(){
 			cout << endl ;
 			for(int i = 0 ; i < gmail.get_point() ; i++){
-				cout << char(219) << char(219) << char(219) << char(219) << char(219) << char(219) << " " << gmail[i] << endl ;
+				cout << gmail[i] << endl ;
 			}
 		}
 		// one Input place for all rooms
@@ -1206,7 +1207,7 @@ class ZeroToUniversity{
 				
 				// AI output
 				//color + ai_color ;
-				cout << " PC AI : " ; 
+				cout << "PC AI :" ; 
 				//color + 7 ;
 				cout << "As you see there is some info that you can access the ITO with it. \n The web address added to your browser.\n Lets see what's happening there." << endl ;
 				
@@ -1354,7 +1355,7 @@ class ZeroToUniversity{
 				
 				// AI output
 				//color + ai_color ;
-				cout << " PC AI : " ; 
+				cout << "PC AI :" ; 
 				//color + 7 ;
 				cout << "Hey chloe ,use 'edit table' to change your scores." << endl << endl ;
 				
@@ -1386,7 +1387,7 @@ class ZeroToUniversity{
 				
 				// AI output:
 				//color + ai_color ;
-				cout << " PC AI : " ; 
+				cout << "PC AI :" ; 
 				//color + 7 ;
 				
 				// age nomre AP kam tar az 10 bood AI yechi dg bege :)
@@ -1403,26 +1404,26 @@ class ZeroToUniversity{
 				// changing the color if the scores if it is less than 10 :)
 				if(chloe_math > 9){
 					//color + 10 ;
-					cout << char(219) << char(219) << char(219) << char(219) << char(219) << char(219) << " " << "math" <<" : " << chloe_math << endl ;
+					cout << "math" <<" : " << chloe_math << endl ;
 				}else{
 					//color + 12 ;
-					cout << char(219) << char(219) << char(219) << char(219) << char(219) << char(219) << " " << "math" <<" : " << chloe_math << endl ;
+					cout << "math" <<" : " << chloe_math << endl ;
 				}
 				
 				if(chloe_AP > 9){
 					//color + 10 ;
-					cout << char(219) << char(219) << char(219) << char(219) << char(219) << char(219) << " " << "AP" <<" : " << chloe_AP << endl ;
+					cout << "AP" <<" : " << chloe_AP << endl ;
 				}else{
 					//color + 12 ;
-					cout << char(219) << char(219) << char(219) << char(219) << char(219) << char(219) << " " << "AP" <<" : " << chloe_AP << endl ;
+					cout << "AP" <<" : " << chloe_AP << endl ;
 				}
 				
 				if(chloe_physic > 9){
 					//color + 10 ;
-					cout << char(219) << char(219) << char(219) << char(219) << char(219) << char(219) << " " << "physics" <<" : " << chloe_physic << endl ;
+					cout << "physics" <<" : " << chloe_physic << endl ;
 				}else{
 					//color + 12 ;
-					cout << char(219) << char(219) << char(219) << char(219) << char(219) << char(219) << " " << "physics" <<" : " << chloe_physic << endl ;
+					cout << "physics" <<" : " << chloe_physic << endl ;
 				}
 				
 				//defualt output color
@@ -1449,7 +1450,7 @@ class ZeroToUniversity{
 				
 				// AI output:
 				//color + ai_color ;
-				cout << " PC AI : " ; 
+				cout << "PC AI :" ; 
 				//color + 7 ;
 				cout << "We are in LMS." << endl << endl ;	
 				
@@ -1531,7 +1532,7 @@ class ZeroToUniversity{
 				
 				// AI output:
 				//color + ai_color ;
-				cout << " PC AI : " ; 
+				cout << "PC AI :" ; 
 				//color + 7 ;
 				cout << "!!! ACCESS DENIED !!!" << endl << endl ;				
 				
@@ -1553,7 +1554,7 @@ class ZeroToUniversity{
 				
 				// AI output:
 				//color + ai_color ;
-				cout << " PC AI : " ; 
+				cout << "PC AI :" ; 
 				//color + 7 ;
 				cout << "!!! ACCESS DENIED !!!" << endl << endl ;
 				
@@ -1591,17 +1592,17 @@ class ZeroToUniversity{
 			
 			// AI output:
 			//color + ai_color ;
-			cout << " PC AI : " ; 
+			cout << "PC AI :" ; 
 			//color + 7 ;
 			cout << "I'm sorry, I had to use that private data to hack VAJA." << endl << endl ;
 			//sleep(2);
 			//color + ai_color ;
-			cout << " PC AI : " ; 
+			cout << "PC AI :" ; 
 			//color + 7 ;
 			cout << "This how my programmers coded me!" << endl << endl ;
 			//sleep(2);
 			//color + ai_color ;
-			cout << " PC AI : " ; 
+			cout << "PC AI :" ; 
 			//color + 7 ;
 			cout << "Goodbye..." << endl << endl ;
 			//sleep(2);
@@ -1626,19 +1627,19 @@ class ZeroToUniversity{
 				
 				// AI output:
 				//color + ai_color ;
-				cout << " PC AI : " ; 
+				cout << "PC AI :" ; 
 				//color + 7 ;
 				cout << "let me get it for you" << endl << endl ;
 				cout << "loading..." << endl ;
 				//sleep(2);
 				///color + ai_color ;
-				cout << " PC AI : " ; 
+				cout << "PC AI :" ; 
 				//color + 7 ;
 				cout << "Here is information :" << endl << endl ;
 				cout << "Name : chloe\nlastname : clem\nlocation : 0km farther\nuser IP : 85.133.195.18\nyour IP : 85.133.195.18" << endl ;
 				
 				//color + ai_color ;
-				cout << " PC AI : " ; 
+				cout << "PC AI :" ; 
 				//color + 7 ;
 				cout << "How is it possible ? you didn't access the site ..." << endl << endl ;
 				
@@ -1665,7 +1666,7 @@ class ZeroToUniversity{
 				cout <<"|      -    YOU CAN'T ACCESS THIS WEBSITE     -     |" << endl ;
 				cout <<" ---------------------------------------------------" << endl << endl ;
 				//color + ai_color ;
-				cout << " PC AI : " ; 
+				cout << "PC AI :" ; 
 				//color + 7 ;
 				cout << "It seem's someone is hacking this webiste before you !" << endl << endl ;
 				cout <<" ---------------------------------------------------" << endl ;
@@ -1694,7 +1695,7 @@ class ZeroToUniversity{
 				
 				// AI output:
 				//color + ai_color ;
-				cout << " PC AI : " ; 
+				cout << "PC AI :" ; 
 				//color + 7 ;
 				cout << "We have many access right now." << endl << endl ;
 				cout << "You can access these places via our platform :" << endl;
@@ -1725,7 +1726,7 @@ class ZeroToUniversity{
 				
 				// AI output:
 				//color + ai_color ;
-				cout << " PC AI : " ; 
+				cout << "PC AI :" ; 
 				//color + 7 ;
 				cout << "Internet is open ! choose the site you want to go: " << endl << endl ;
 				
@@ -1841,7 +1842,7 @@ class ZeroToUniversity{
 				
 				// AI output:
 				//color + ai_color ;
-				cout << " PC AI : " ; 
+				cout << "PC AI :" ; 
 				//color + 7 ;
 				cout << "let's do from the first !" << endl << endl ;
 				cout << "here is your tasks:" << endl ;
@@ -1868,7 +1869,7 @@ class ZeroToUniversity{
 			
 			// AI output:
 			//color + ai_color ;
-			cout << " PC AI : " ; 
+			cout << "PC AI :" ; 
 			//color + 7 ;
 			cout << "enter -1 to exit" << endl << endl ;
 			cout << "guess a number (1 - 100): ";
@@ -1912,7 +1913,7 @@ class ZeroToUniversity{
 				
 				// AI output
 				//color + ai_color ;
-				cout << " PC AI : " ; 
+				cout << "PC AI :" ; 
 				//color + 7 ;
 				cout << "games folder is open" << endl << endl ;
 				
@@ -1941,11 +1942,11 @@ class ZeroToUniversity{
 				
 				// AI output
 				//color + ai_color ;
-				cout << " PC AI : " ; 
+				cout << "PC AI :" ; 
 				//color + 7 ;
 				
 				
-				cout << "hello chloe, check your task managment app. " << endl << endl ;
+				cout << "hello chloe, check your task managment app." << endl << endl ;
 				
 				// output text and check user input(inke user chikar mikhd bokone)
 				string a[] = {"Internet" , "task managment app" , "games" , "shutdown"};
@@ -1981,7 +1982,6 @@ int main(){
 	//run the game :
 	string a;
 	getline(cin,a);
-	//cin.ignore();
 	test.start();
 	
 	return 0;
