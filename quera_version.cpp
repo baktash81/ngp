@@ -1870,7 +1870,7 @@ class ZeroToUniversity{
 			cout << "PC AI :" ; 
 			//color + 7 ;
 			cout << "enter -1 to exit" << endl << endl ;
-			cout << "guess a number (1 - 100):";
+			cout << "guess a number (1 - 100):"<<endl;
 			
 			// addad tasdofi ke bayad hads zade beshe
 			int number = rand()%100 ;
