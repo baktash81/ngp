@@ -5,6 +5,9 @@ using namespace std;
 #include "assemble.h"
 assemble::assemble(){
 	pass = false ;
+	rezpass = false;
+	bakpass = false;
+	hesampass = false;
 }
 
 
