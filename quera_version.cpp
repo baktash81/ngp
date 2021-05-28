@@ -1896,7 +1896,7 @@ class ZeroToUniversity{
 				}else if(guessed < number){
 					cout << "guess the bigger one!" << endl ;
 				}
-				cout << "number :" ;
+				cout << "number :"<<endl ;
 			}
 		}
 		void AIsurprise(){
