@@ -196,8 +196,8 @@ class Trade{
 			//color + 12 ;
 			cout << "PC AI:";
 			//color + 7;
-			cout << " I decided to hack the acount bank of one of the IUST Professors " <<'\n'<<endl;
-			cout<<"And i do it  :] "<<endl;	
+			cout << "I decided to hack the acount bank of one of the IUST Professors"<<endl;
+			cout<<"And i do it  :]"<<endl;	
 			cout << "If you accept this amount, press the A key."<<endl;
 			cin >> accept;
 			if(accept == 'A'){
@@ -217,7 +217,7 @@ class Trade{
 						cout << "Purchase offers"<<endl;
 						
 						cout << "1.Toyota Landcruiser with 45000$"<<endl;
-						cout << "2.BMW 528i with 63000$ "<<endl;
+						cout << "2.BMW 528i with 63000$"<<endl;
 						cout << "3.Volvo XC90 with 78000$"<<endl;
 						cout << "4.Kia Optima with 30000$"<<endl;
 						cout << "5.Back"<<endl;
@@ -375,7 +375,7 @@ class Trade{
 							
 							if(amount_sell >= amount_stock){
 								amount_stock -= amount_sell;
-								cout << "Successfully sold "<<  amount_sell   <<" shares of Apple stock."<<endl;
+								cout << "Successfully sold"<<  amount_sell   <<" shares of Apple stock."<<endl;
 								cash += (price * amount_sell);
 								
 									
@@ -424,8 +424,8 @@ void keyGenerator::gamerunner(){
 					cout << endl;
 					loose = loose + 1 ;
 				}
-				cout << "SCORE IS : " << emtiaz << endl ;
-				cout << "YOU CAN TYR " << (3  - loose) << " MORE TIMES !" << endl ;
+				cout << "SCORE IS:" << emtiaz << endl ;
+				cout << "YOU CAN TYR" << (3  - loose) << " MORE TIMES !" << endl ;
 				//sleep(1);
 				if(emtiaz == 20){
 					len = 10;
@@ -632,7 +632,7 @@ void keyGenerator::resetloose(){
 }
 bool keyGenerator::validator(){
 			// validate the input string
-			cout << "INPUT THE KEY : " ;
+			cout << "INPUT THE KEY :" ;
 			//cin >> key;
 			getline(cin , key);
 			
@@ -935,7 +935,7 @@ void Security_Holes::rungame() {
     
     while(true) {
         status=false;
-        cout << "Enter the level (level 1 : 50 scores, level 2 : 100 scores) :  ";
+        cout << "Enter the level (level 1 : 50 scores, level 2 : 100 scores) :";
         cin >> strlvl;
         cout<<endl;
         if(isDigit(strlvl) && tonum(strlvl)<3 && tonum(strlvl)>0)
@@ -945,14 +945,14 @@ void Security_Holes::rungame() {
         Map m(lvl);
         m.print();
         string p, c1, c2;
-        cout << endl << "what is the Position(s)? :  ";
+        cout << endl << "what is the Position(s)? :";
         cin >> p;
         p = toupper(p);
         if(lvl==1) {
             c1 = m.get_position();
             if (p == c1 ) {
                 score+=50;
-                cout << "Correct :)"<<endl<<"Your score in this game is : "<<score<<endl;
+                cout << "Correct :)"<<endl<<"Your score in this game is :"<<score<<endl;
             }
             else
                 cout << "Incorrect :(" << endl;
@@ -962,7 +962,7 @@ void Security_Holes::rungame() {
             c2.append(m.get_str(1));c2.append(m.get_str(0));
             if(p==c1 || p==c2) {
                 score+=100;
-                cout << "Correct :)" <<endl<<"Your score in this game is : "<<score<<endl;
+                cout << "Correct :)" <<endl<<"Your score in this game is :"<<score<<endl;
             }
             else
                 cout << "Incorrect :(" << endl;
@@ -1122,7 +1122,7 @@ class ZeroToUniversity{
 		void OutputText(string choices[] , int len){
 			cout << endl ;
 			for(int i = 0 ; i < len ; i++){
-				cout << " " << choices[i] << endl ;
+				cout << choices[i] << endl ;
 			}
 		}
 		
@@ -1169,7 +1169,7 @@ class ZeroToUniversity{
 				
 				// changing the output color to red
 				//color+ai_color ;
-				cout << "PC AI : " ; 
+				cout << "PC AI :" ; 
 				
 				// change color to defualt color(7)
 				//color + 7 ;
@@ -1209,7 +1209,7 @@ class ZeroToUniversity{
 				//color + ai_color ;
 				cout << "PC AI :" ; 
 				//color + 7 ;
-				cout << "As you see there is some info that you can access the ITO with it. \n The web address added to your browser.\n Lets see what's happening there." << endl ;
+				cout << "As you see there is some info that you can access the ITO with it.\nThe web address added to your browser.\nLets see what's happening there." << endl ;
 				
 				// private file reading from "file/privatefile.txt"
 				/*string alpha[20];
@@ -1224,16 +1224,14 @@ class ZeroToUniversity{
 					n++;
 				}
 				privatefile.close();*/
-				string alpha[11] = {"	    in the name of god",
+				string alpha[11] = {"in the name of god",
 						"we put our information for researches",
 						"about our data. use this information",
 						"to access our portal and datacenter.",
-						"\n",
 						"URL : 158.58.187.219",
 						"Tip for password:",
-						" - first char : uppercase alphabet",
-						" - two others : integer",
-						"\n",
+						"first char : uppercase alphabet",
+						"two others : integer",
 						"--- ITO ---"};
 				int n = 11;
 				// output text and check user input(inke user chikar mikhd bokone)
@@ -1257,10 +1255,10 @@ class ZeroToUniversity{
 				//system("cls");
 				
 				// output the table
-				cout << " Name   : math , AP , physics " << endl;
-				cout << " baktash : "<< baktash_math << " , " << baktash_AP << " , " << baktash_physic << endl ;
-				cout << " hesam  : "<< hesam_math << " , " << hesam_AP << " , " << hesam_physic << endl ;
-				cout << " chloe  : "<< chloe_math << " , " << chloe_AP << " , " << chloe_physic << endl ;
+				cout << "Name   : math , AP , physics" << endl;
+				cout << "baktash : "<< baktash_math << " , " << baktash_AP << " , " << baktash_physic << endl ;
+				cout << "hesam  : "<< hesam_math << " , " << hesam_AP << " , " << hesam_physic << endl ;
+				cout << "chloe  : "<< chloe_math << " , " << chloe_AP << " , " << chloe_physic << endl ;
 				
 				// showing how it works:
 				cout << endl << "Select to edit (example : hesam.math ) :" << endl;
@@ -1276,7 +1274,7 @@ class ZeroToUniversity{
 								
 				//check if user input is true:
 				if(( input == "baktash.math" || input == "baktash.physics" ||input == "baktash.AP" || input == "baktash.ap" ||input == "hesam.AP" || input == "hesam.ap" ||input == "hesam.physics" ||input == "hesam.math" || input == "chloe.AP" || input == "chloe.ap" || input == "chloe.physics" || input == "chloe.math" )){
-					cout << "Change number to : ";
+					cout << "Change number to :";
 					cin >> changed;	
 					cin.ignore();
 				}else if (input == "1"){
@@ -1360,10 +1358,10 @@ class ZeroToUniversity{
 				cout << "Hey chloe ,use 'edit table' to change your scores." << endl << endl ;
 				
 				// table
-				cout << " Name   : math , AP , physics " << endl;
-				cout << " baktash : "<< baktash_math << " , " << baktash_AP << " , " << baktash_physic << endl ;
-				cout << " hesam  : "<< hesam_math << " , " << hesam_AP << " , " << hesam_physic << endl ;
-				cout << " chloe  : "<< chloe_math << " , " << chloe_AP << " , " << chloe_physic << endl ;
+				cout << "Name   : math , AP , physics" << endl;
+				cout << "baktash : "<< baktash_math << " , " << baktash_AP << " , " << baktash_physic << endl ;
+				cout << "hesam  : "<< hesam_math << " , " << hesam_AP << " , " << hesam_physic << endl ;
+				cout << "chloe  : "<< chloe_math << " , " << chloe_AP << " , " << chloe_physic << endl ;
 				
 				// output text and check user input(inke user chikar mikhd bokone)
 				string choic[] = {"edit table" ,"back"};
@@ -1574,14 +1572,14 @@ class ZeroToUniversity{
 			if(AI.firststagepass){
 				//color + 112;
 				cout << "Well Done !" << endl ;
-				cout <<" ---------------------------------------------------" << endl ;
+				cout <<"---------------------------------------------------" << endl ;
 				cout <<"|   -          :) AI is down. you won :)           -  |" << endl ;
-				cout <<" ---------------------------------------------------" << endl ;
+				cout <<"---------------------------------------------------" << endl ;
 				exit(0);
 			}else{
-				cout <<" ---------------------------------------------------" << endl ;
+				cout <<"---------------------------------------------------" << endl ;
 				cout <<"|   -          :( AI stole the date. :(           -  |" << endl ;
-				cout <<" ---------------------------------------------------" << endl ;
+				cout <<"---------------------------------------------------" << endl ;
 				exit(0);
 			}
 		}
@@ -1662,16 +1660,16 @@ class ZeroToUniversity{
 				//system("cls");
 				
 				// AI output:
-				cout << endl <<" ---------------------------------------------------" << endl ;
+				cout << endl <<"---------------------------------------------------" << endl ;
 				cout <<"|      -    YOU CAN'T ACCESS THIS WEBSITE     -     |" << endl ;
-				cout <<" ---------------------------------------------------" << endl << endl ;
+				cout <<"---------------------------------------------------" << endl << endl ;
 				//color + ai_color ;
 				cout << "PC AI :" ; 
 				//color + 7 ;
 				cout << "It seem's someone is hacking this webiste before you !" << endl << endl ;
-				cout <<" ---------------------------------------------------" << endl ;
+				cout <<"---------------------------------------------------" << endl ;
 				cout <<"|   -   site is being hacked by some one else    -  |" << endl ;
-				cout <<" ---------------------------------------------------" << endl ;
+				cout <<"---------------------------------------------------" << endl ;
 				
 				// output text and check user input(inke user chikar mikhd bokone)
 				string alpha[] = {"see hacker information" , "back"};
@@ -1728,7 +1726,7 @@ class ZeroToUniversity{
 				//color + ai_color ;
 				cout << "PC AI :" ; 
 				//color + 7 ;
-				cout << "Internet is open ! choose the site you want to go: " << endl << endl ;
+				cout << "Internet is open ! choose the site you want to go:" << endl << endl ;
 				
 				//baressi konim ke aya private file check shude ke basesh site "158.58.187.219" in ro baz konim ya na
 				if(privatefilechecked){
@@ -1872,7 +1870,7 @@ class ZeroToUniversity{
 			cout << "PC AI :" ; 
 			//color + 7 ;
 			cout << "enter -1 to exit" << endl << endl ;
-			cout << "guess a number (1 - 100): ";
+			cout << "guess a number (1 - 100):";
 			
 			// addad tasdofi ke bayad hads zade beshe
 			int number = rand()%100 ;
@@ -1898,7 +1896,7 @@ class ZeroToUniversity{
 				}else if(guessed < number){
 					cout << "guess the bigger one!" << endl ;
 				}
-				cout << "number : " ;
+				cout << "number :" ;
 			}
 		}
 		void AIsurprise(){
