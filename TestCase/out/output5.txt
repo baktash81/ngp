@@ -1,0 +1,186 @@
+PC AI :hello chloe, check your task managment app.
+
+
+1 :Internet
+
+2 :task managment app
+
+3 :games
+
+4 :shutdown
+
+INPUT:
+PC AI :Internet is open ! choose the site you want to go:
+
+
+1 :university LMS
+
+2 :email
+
+3 :back
+
+INPUT:
+PC AI :Internet is open ! choose the site you want to go:
+
+
+1 :university LMS
+
+2 :email
+
+3 :back
+
+INPUT:
+PC AI :We are in LMS.
+
+
+1 :see your scores
+
+2 :back
+
+INPUT:
+PC AI :Ops! it seems your ap score is to slow. but i think you can hack...
+
+name : chloe
+lastname : clem
+math : 18
+AP : 2
+physics : 14
+
+1 :back
+
+INPUT:
+PC AI :We are in LMS.
+
+
+1 :see your scores
+
+2 :see the site database (hecked early)
+
+3 :back
+
+INPUT:
+PC AI :So we are in iust datacenter. Hey is that private folder ?
+
+1 :TABLE_STUDENTS_SCORE
+
+2 :PRIVATE FILES
+
+3 :back
+
+INPUT:
+PC AI :Hey chloe ,use 'edit table' to change your scores.
+
+Name   : math , AP , physics
+baktash : 19 , 18 , 17
+hesam  : 18 , 19 , 16
+chloe  : 18 , 2 , 14
+
+1 :edit table
+
+2 :back
+
+INPUT:
+PC AI :Hey chloe ,use 'edit table' to change your scores.
+
+Name   : math , AP , physics
+baktash : 19 , 18 , 17
+hesam  : 18 , 19 , 16
+chloe  : 18 , 2 , 14
+
+1 :edit table
+
+2 :back
+
+INPUT:
+Name   : math , AP , physics
+baktash : 19 , 18 , 17
+hesam  : 18 , 19 , 16
+chloe  : 18 , 2 , 14
+
+Select to edit (example : hesam.math ) :
+
+1 :back
+
+INPUT:
+Change number to :
+Name   : math , AP , physics
+baktash : 19 , 18 , 17
+hesam  : 18 , 0 , 16
+chloe  : 18 , 2 , 14
+
+Select to edit (example : hesam.math ) :
+
+1 :back
+
+INPUT:
+PC AI :Hey chloe ,use 'edit table' to change your scores.
+
+Name   : math , AP , physics
+baktash : 19 , 18 , 17
+hesam  : 18 , 0 , 16
+chloe  : 18 , 2 , 14
+
+1 :edit table
+
+2 :back
+
+INPUT:
+PC AI :So we are in iust datacenter. Hey is that private folder ?
+
+1 :TABLE_STUDENTS_SCORE
+
+2 :PRIVATE FILES
+
+3 :back
+
+INPUT:
+PC AI :We are in LMS.
+
+
+1 :see your scores
+
+2 :see the site database (hecked early)
+
+3 :back
+
+INPUT:
+PC AI :Internet is open ! choose the site you want to go:
+
+
+1 :university LMS
+
+2 :email (1)
+
+3 :back
+
+INPUT:
+your inbox :
+
+hesam : Whats wrong with LMS? my scores had changed!
+
+1 :back
+
+INPUT:
+PC AI :Internet is open ! choose the site you want to go:
+
+
+1 :university LMS
+
+2 :email (1)
+
+3 :back
+
+INPUT:
+PC AI :hello chloe, check your task managment app.
+
+
+1 :Internet
+
+2 :task managment app
+
+3 :games
+
+4 :shutdown
+
+INPUT:
+bye !
