@@ -1,0 +1,76 @@
+PC AI :hello chloe, check your task managment app.
+
+
+1 :Internet
+
+2 :task managment app
+
+3 :games
+
+4 :shutdown
+
+INPUT:
+PC AI :games folder is open
+
+
+1 :Guess the number!
+
+2 :AI surprise
+
+3 :back
+
+INPUT:
+PC AI:I decided to hack the acount bank of one of the IUST Professors
+And i do it  :]
+If you accept this amount, press the A key.
+Cash:10000
+Now, What do you want to do with your money?
+1. buy a car
+2. buy a home
+3. Stock
+4. Finish Game
+Purchase offers
+1.Toyota Landcruiser with 45000$
+2.BMW 528i with 63000$
+3.Volvo XC90 with 78000$
+4.Kia Optima with 30000$
+5.Back
+Cash:10000
+Now, What do you want to do with your money?
+1. buy a car
+2. buy a home
+3. Stock
+4. Finish Game
+PC AI :games folder is open
+
+
+1 :Guess the number!
+
+2 :AI surprise
+
+3 :back
+
+INPUT:
+PC AI :games folder is open
+
+
+1 :Guess the number!
+
+2 :AI surprise
+
+3 :back
+
+INPUT:
+PC AI :hello chloe, check your task managment app.
+
+
+1 :Internet
+
+2 :task managment app
+
+3 :games
+
+4 :shutdown
+
+INPUT:
+bye !

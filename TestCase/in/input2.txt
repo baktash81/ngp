@@ -1,24 +1,4 @@
-//searching the internet
-1 (internet)
-4 ( wrong input)
-2 (email)
-1 ( back )
-1 (lms)
-1(back)
-2(hack the site)
-dddsssaaaaaaaw (key)
-dddsssssa (key)
-sssssddddddddsaaaaaawwwwwwww (key)(lock breaked)
-1 (table)
-1 (edit)
-nima.ap (worng)
-hesam.ap (true)
-11 (email is sent !)
-1(back)
-2(back)
-3 (back)
-3(back)
-2(email)
-1 (back)
-3(back)
-4(shutdown)
+1
+2
+1
+4
