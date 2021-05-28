@@ -1009,6 +1009,9 @@ class assemble{
 };
 assemble::assemble(){
 	pass = false ;
+	rezpass = true;
+	bakpass = true;
+	hesampass = true ;
 }
 
 
@@ -1959,7 +1962,7 @@ class ZeroToUniversity{
 					Intasks();
 				}else if(g == "4"){
 					cout << "bye !" ;
-					return;
+					exit(0);
 				}else if(g == "3"){
 					Indesktopgame();
 				}
