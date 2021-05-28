@@ -1869,7 +1869,7 @@ class ZeroToUniversity{
 			//color + ai_color ;
 			cout << "PC AI :" ; 
 			//color + 7 ;
-			cout << "enter -1 to exit" << endl << endl ;
+			cout << "enter -1 to exit" << endl ;
 			cout << "guess a number (1 - 100):"<<endl;
 			
 			// addad tasdofi ke bayad hads zade beshe
@@ -1890,6 +1890,7 @@ class ZeroToUniversity{
 				if(guessed == number){
 					cout << "Hoooray thats true!" << endl ;
 					//sleep(2);
+					cin.ignore();
 					return;
 				}else if(guessed > number){
 					cout << "guess the smaller one!" << endl ;
