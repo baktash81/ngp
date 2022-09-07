@@ -2,4 +2,4 @@
 
 ## Pre-Alpha Netflix game project
 
-### Fundamental Programming Language Course project with C++
+### Advanced Programming Language Course project with C++
